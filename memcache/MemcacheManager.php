@@ -21,14 +21,15 @@ class MemcacheManager
     /**
      * get a server by config
      * 
-     * @param Array $config server config
+     * @param Array   $config server config
+     * @param boolean $create 如果不存在, 是否创建连接
      * 
      * @return MemcacheClient
      */
-    public function get($config)
+    public function get($config, $create = true)
     {
         $key = $this->_genKey($config['host'] . $config['port']);
-        if (!isset($this->_servers[$key])) {
+        if (!isset($this->_servers[$key]) && true === $create) {
             $this->_createServer($key, $config);
         }
 
@@ -54,7 +55,7 @@ class MemcacheManager
     {
         return sprintf(
             '%u',
-            crc32($str);
+            crc32($str)
         );
     }
 }

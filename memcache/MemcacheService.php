@@ -1,7 +1,4 @@
 <?php
-include_once './MemcacheConnectException.php';
-include_once './MemcacheManage.php';
-include_once './MemcacheClient.php';
 
 /**
  * Memcache 一致性哈希实现
@@ -23,20 +20,20 @@ class MemcacheService
      */
     private function __construct()
     {
-        $this->_config = $this->getConfig();
+        $config = $this->getConfig();
 
-        $this->_virtualNodeCoefficient = isset($this->_config['virtualNodeCoefficient']) ?
-            max(intval($this->_config['virtualNodeCoefficient']), 1) : 1;
+        $this->setVirtualNodeCoefficient(
+            isset($config['virtualNodeCoefficient']) ?
+                $config['virtualNodeCoefficient'] : 10
+        );
 
-        foreach ($this->_config['servers'] as $server) {
-            // $this->addServer($server['host'], $server['port']);
-            $nodes = $this->_virtualNodeCoefficient * $server['weight'];
-            for ($i = 0; $i <= $nodes; $i ++) {
-                $this->addServer($server['host'], $server['port'], $i);
+        if (isset($config['servers'])) {
+            foreach ($config['servers'] as $server) {
+                $this->addRealServer(
+                    $server['host'], $server['port'], $weight
+                );
             }
         }
-
-        ksort($this->_serverConfigMap);
     }
 
     /**
@@ -55,6 +52,46 @@ class MemcacheService
     }
 
     /**
+     * 添加一个真实服务器
+     * 
+     * @param string $host   host
+     * @param int    $port   端口
+     * @param int    $weight 权重
+     *
+     * @return void
+     */
+    public function addRealServer($host, $port, $weight = 1)
+    {
+        $key = md5($host . ':' . $port);
+        if (isset($this->_config['servers'][$key])) {
+            throw new Exception('server is exists');
+        }
+        $nodes = $this->_virtualNodeCoefficient * $weight;
+        for ($i = 0; $i < $nodes; $i ++) {
+            $this->_addVirtualNode($host, $port, $i);
+        }
+        ksort($this->_serverConfigMap);
+        $this->_config['servers'][$key] = [
+            'host' => $host,
+            'port' => $port,
+            'weight' => $weight
+        ];
+    }
+
+    /**
+     * 设置虚拟节点系数
+     * 
+     * @param int $c 系数
+     *
+     * @return void
+     */
+    public function setVirtualNodeCoefficient($c)
+    {
+        $this->_virtualNodeCoefficient = max(intval($c), 1);
+        $this->_config['virtualNodeCoefficient'] = $c;
+    }
+
+    /**
      * 添加一个服务器
      * 
      * @param string $host               服务器
@@ -63,7 +100,7 @@ class MemcacheService
      *
      * @return self
      */
-    public function addServer($host, $port, $virtualNoteCounter = 0)
+    public function _addVirtualNode($host, $port, $virtualNoteCounter = 0)
     {
         $key = $this->genServerHashKey(
             $host, $port, $virtualNoteCounter
@@ -104,30 +141,44 @@ class MemcacheService
      */
     public function getConfig()
     {
-        return [
-            // 虚拟节点系数, 乘以服务器weight为服务器虚拟节点数
-            'virtualNodeCoefficient' => 10,
-            // 服务器列表
-            'servers' => [
-                'server1' => [
-                    'host' => '127.0.0.1',
-                    'port' => 12000,
-                    'weight' => 1
-                ]
-            ]
-        ];
+        // return [
+        //     // 虚拟节点系数, 乘以服务器weight为服务器虚拟节点数
+        //     'virtualNodeCoefficient' => 10,
+        //     // 服务器列表
+        //     'servers' => [
+        //         [
+        //             'host' => '127.0.0.1',
+        //             'port' => 12000,
+        //             'weight' => 1
+        //         ],
+        //         [
+        //             'host' => '127.0.0.1',
+        //             'port' => 12010,
+        //             'weight' => 1
+        //         ],
+        //     ]
+        // ];
+        return [];
     }
 
     public function set($key, $value)
     {
         $server = $this->getServer($key);
-        //return $server->set($key, $value);
+        return $server->set($key, $value);
     }
 
     public function get($key)
     {
         return $this->getServer($key)->get($key);
     }
+
+    public function flush()
+    {
+        foreach ($this->_config['servers'] as $key => $config) {
+            $client = $this->memcacheManager()->get($config)->flush();
+        }
+    }
+
 
     /**
      * 获取服务器
@@ -142,13 +193,10 @@ class MemcacheService
         $config = null;
         $client = null;
         while (null === $client) {
-            $client = MemecacheManager::getInstance()->get($config);
+            $config = $this->_findConfig($key);
+            $client = $this->memcacheManager()->get($config);
             if (null === $client) {
                 $this->_setServerInvalid($config);
-                $config = $this->_findConfig($key)
-            }
-            if (null === $config) {
-                throw new MemcacheConnectException();
             }
         }
         return $client;
@@ -180,12 +228,18 @@ class MemcacheService
             );
             unset($this->_serverConfigMap[$key]);
         }
+        // @todo 标记配置文件, 使该配置的服务器不可用
 
-        MemcacheManager::removeServer($fullConfig);
+        $this->memcacheManager()->removeServer($fullConfig);
+    }
+
+    public function memcacheManager()
+    {
+        return MemcacheManager::getInstance();
     }
 
     /**
-     * 查找服务器映射节点配置
+     * 查找key映射节点的配置
      * 
      * @param int $key key
      * 
@@ -215,6 +269,11 @@ class MemcacheService
             }
         }
         return $config;
+    }
+
+    public function getServerConfigByKey($key)
+    {
+        return $this->_findConfig($key);
     }
 
 }

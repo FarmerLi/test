@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/D/project/test"
+		},
+		{
+			"path": "/D/project/memcache"
 		}
 	]
 }

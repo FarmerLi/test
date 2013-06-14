@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"call_us",
+				"call_user_func_array"
+			],
+			[
+				"Memcache",
+				"MemcacheManager"
+			],
+			[
 				"fun",
 				"fullConfig"
 			],
@@ -487,7 +495,7 @@
 			"file": "memcache/MemcacheService.php",
 			"settings":
 			{
-				"buffer_size": 5311,
+				"buffer_size": 5501,
 				"line_ending": "Unix"
 			}
 		},
@@ -495,7 +503,7 @@
 			"file": "memcache/MemcacheClient.php",
 			"settings":
 			{
-				"buffer_size": 288,
+				"buffer_size": 665,
 				"line_ending": "Unix"
 			}
 		},
@@ -576,6 +584,7 @@
 	},
 	"file_history":
 	[
+		"/D/project/test/README.md",
 		"/D/webserver/php5.4/php.ini",
 		"/D/webserver/apache/logs/error.log",
 		"/D/webserver/php/php.ini",
@@ -702,8 +711,7 @@
 		"/D/project/jinxiang/application/config/constants.php",
 		"/D/project/jinxiang/jx_cart/views/goods_add.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/%E6%96%B0%281%29.txt                C%3A%5CUsers%5CAdministrator%5CDesktop%5C%E6%96%B0%281%29.txt",
-		"/C/Users/Administrator/Desktop/新(1).txt",
-		"/D/project/jinxiang/jx_cart/config/sync_config.php"
+		"/C/Users/Administrator/Desktop/新(1).txt"
 	],
 	"find":
 	{
@@ -724,6 +732,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"memcacheM",
 			"apc",
 			"extension_dir",
 			"apc",
@@ -850,8 +859,7 @@
 			"update_order_info",
 			"->insert",
 			"update_order_info",
-			"get_sto",
-			"shipped_time"
+			"get_sto"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -888,15 +896,15 @@
 					"file": "memcache/MemcacheService.php",
 					"settings":
 					{
-						"buffer_size": 5311,
+						"buffer_size": 5501,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3743,
-								3743
+								2949,
+								2949
 							]
 						],
 						"settings":
@@ -1039,7 +1047,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2805.0,
+						"translation.y": 1944.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1049,15 +1057,15 @@
 					"file": "memcache/MemcacheClient.php",
 					"settings":
 					{
-						"buffer_size": 288,
+						"buffer_size": 665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								242,
-								242
+								663,
+								663
 							]
 						],
 						"settings":
@@ -1195,7 +1203,9 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1215,8 +1225,8 @@
 						"selection":
 						[
 							[
-								1174,
-								1174
+								664,
+								664
 							]
 						],
 						"settings":
@@ -1354,10 +1364,12 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
