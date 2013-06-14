@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--这是一个典型的phpunit配置文件-->
+<!--bootstrap 配置预加载文件, colors指定是否颜色显示-->
+<phpunit bootstrap="./autoload.php" colors="true">
+  <!--配置一个测试套件, sufffix指定phpunit读取匹配指定后缀的文件为需要测试的文件-->
+  <testsuite name="My Test Suite">
+    <directory suffix="Test.php">.</directory>
+  </testsuite>
+    <!--指定生成的log-->
+    <logging>
+        <log type="coverage-html" target="../build/coverage" title="Name of Project"
+             charset="UTF-8" yui="true" highlight="true"
+             lowUpperBound="35" highLowerBound="70"/>
+        <log type="coverage-clover" target="../build/logs/clover.xml"/>
+        <log type="junit" target="../build/logs/junit.xml"
+             logIncompleteSkipped="false"/>
+    </logging>
+</phpunit>
