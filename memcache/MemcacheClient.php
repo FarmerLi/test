@@ -5,6 +5,8 @@ class MemcacheClient
 
     private $_config = [];
 
+    //private $_data = [];
+
     public function __construct($config)
     {
         $this->_client = new Memcache();
@@ -28,4 +30,25 @@ class MemcacheClient
 
         return call_user_func_array([$this->_client, $func], $params);
     }
+    /*
+    public function get($key)
+    {
+        return isset($this->_data[$key]) ? $this->_data[$key] : false;
+    }
+
+    public function set($key, $value)
+    {
+        $this->_data[$key] = $value;
+    }
+
+    public function flush()
+    {
+        $this->_data = [];
+    }
+
+    public function count()
+    {
+        return count($this->_data);
+    }
+    */
 }

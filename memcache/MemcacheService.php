@@ -172,10 +172,21 @@ class MemcacheService
         return $this->getServer($key)->get($key);
     }
 
-    public function flush()
+    /**
+     * 清空/删除缓存数据
+     * 
+     * @param Array $config 节点配置
+     * 
+     * @return void
+     */
+    public function flush($config = [])
     {
-        foreach ($this->_config['servers'] as $key => $config) {
-            $client = $this->memcacheManager()->get($config)->flush();
+        if ([] != $config) {
+            $this->memcacheManager()->get($config)->flush();
+        } else {
+            foreach ($this->_config['servers'] as $key => $row) {
+                $this->memcacheManager()->get($row)->flush();
+            }    
         }
     }
 
@@ -222,7 +233,7 @@ class MemcacheService
             return;
         }
         $nodes = $this->_virtualNodeCoefficient * $fullConfig['weight'];
-        for ($i = 0; $i <= $nodes; $i ++) {
+        for ($i = 0; $i < $nodes; $i ++) {
             $key = $this->genServerHashKey(
                 $fullConfig['host'], $fullConfig['port'], $i
             );
@@ -273,7 +284,7 @@ class MemcacheService
 
     public function getServerConfigByKey($key)
     {
-        return $this->_findConfig($key);
+        return $this->_findConfig($this->genHashKey($key));
     }
 
 }
