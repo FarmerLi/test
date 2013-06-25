@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"ser",
+				"server3"
+			],
+			[
+				"tmp",
+				"tmpKey"
+			],
+			[
+				"conf",
+				"configs"
+			],
+			[
+				"cn",
+				"configs"
+			],
+			[
+				"t",
+				"tmp"
+			],
+			[
+				"ke",
+				"key"
+			],
+			[
+				"w",
+				"weight"
+			],
+			[
+				"con",
+				"_config"
+			],
+			[
+				"memc",
+				"memcacheManager"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
 				"call_us",
 				"call_user_func_array"
 			],
@@ -30,10 +70,6 @@
 			[
 				"max",
 				"maxIndex"
-			],
-			[
-				"ke",
-				"keys"
 			],
 			[
 				"th",
@@ -66,10 +102,6 @@
 			[
 				"test",
 				"testextjs"
-			],
-			[
-				"for",
-				"for	for …"
 			],
 			[
 				"json",
@@ -224,10 +256,6 @@
 				"count  (variable)"
 			],
 			[
-				"con",
-				"conditions"
-			],
-			[
 				"code",
 				"code_cookie"
 			],
@@ -326,10 +354,6 @@
 			[
 				"_",
 				"_generateParams  (function)"
-			],
-			[
-				"t",
-				"tmpKey"
 			],
 			[
 				"stock",
@@ -495,7 +519,7 @@
 			"file": "memcache/MemcacheService.php",
 			"settings":
 			{
-				"buffer_size": 5501,
+				"buffer_size": 6589,
 				"line_ending": "Unix"
 			}
 		},
@@ -511,7 +535,7 @@
 			"file": "memcache/MemcacheManager.php",
 			"settings":
 			{
-				"buffer_size": 1176,
+				"buffer_size": 1257,
 				"line_ending": "Unix"
 			}
 		},
@@ -527,7 +551,7 @@
 			"file": "memcache/testmemcache.php",
 			"settings":
 			{
-				"buffer_size": 99,
+				"buffer_size": 1978,
 				"line_ending": "Unix"
 			}
 		}
@@ -584,6 +608,8 @@
 	},
 	"file_history":
 	[
+		"/D/project/test/memcache/testmemcache.php",
+		"/D/project/memcache/apps/appCommon.php",
 		"/D/project/test/README.md",
 		"/D/webserver/php5.4/php.ini",
 		"/D/webserver/apache/logs/error.log",
@@ -709,9 +735,7 @@
 		"/D/project/jinxiang/application/config/express.php",
 		"/D/project/jinxiang/application/controllers/api/stock.php",
 		"/D/project/jinxiang/application/config/constants.php",
-		"/D/project/jinxiang/jx_cart/views/goods_add.php",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/%E6%96%B0%281%29.txt                C%3A%5CUsers%5CAdministrator%5CDesktop%5C%E6%96%B0%281%29.txt",
-		"/C/Users/Administrator/Desktop/新(1).txt"
+		"/D/project/jinxiang/jx_cart/views/goods_add.php"
 	],
 	"find":
 	{
@@ -722,6 +746,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"D:\\project\\memcache",
 			"D:\\project\\jinxiang",
 			"D:\\project\\wms",
 			""
@@ -732,6 +757,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$this->_config['servers']",
+			"_realServers",
+			"_config",
+			"$this->_config",
+			"_addVirtualServer",
+			"addServer(",
+			"session_set_save_handler",
+			"session",
+			"redis",
+			"redi",
 			"memcacheM",
 			"apc",
 			"extension_dir",
@@ -849,17 +884,7 @@
 			"log",
 			"jinxiang",
 			"jingxing",
-			"log",
-			"ca",
-			"update_stock_data",
-			"get_products_by_skus",
-			"by_con",
-			"by)con",
-			"get_un_delivery_ids",
-			"update_order_info",
-			"->insert",
-			"update_order_info",
-			"get_sto"
+			"log"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -867,6 +892,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_realServers",
+			"_addVirtualNode",
+			"_addVirtualServer(",
 			"MemecacheManager",
 			"_serverConfigMap",
 			";",
@@ -896,15 +924,15 @@
 					"file": "memcache/MemcacheService.php",
 					"settings":
 					{
-						"buffer_size": 5501,
+						"buffer_size": 6589,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2949,
-								2949
+								3861,
+								3861
 							]
 						],
 						"settings":
@@ -1047,7 +1075,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1944.0,
+						"translation.y": 2731.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1064,8 +1092,8 @@
 						"selection":
 						[
 							[
-								663,
-								663
+								5,
+								5
 							]
 						],
 						"settings":
@@ -1218,15 +1246,15 @@
 					"file": "memcache/MemcacheManager.php",
 					"settings":
 					{
-						"buffer_size": 1176,
+						"buffer_size": 1257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								664,
-								664
+								1130,
+								1130
 							]
 						],
 						"settings":
@@ -1369,7 +1397,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1538,15 +1566,15 @@
 					"file": "memcache/testmemcache.php",
 					"settings":
 					{
-						"buffer_size": 99,
+						"buffer_size": 1978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								1440,
+								1440
 							]
 						],
 						"settings":
@@ -1684,10 +1712,12 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1969,12 +1999,12 @@
 		"selected_items":
 		[
 			[
-				"",
-				"/D/project/wms-ci/wms-ci.sublime-project"
+				"wms",
+				"/D/project/wms-ci-0.5/wms-ci-0.5.sublime-project"
 			],
 			[
-				"wms",
-				"/D/project/wms/wms.sublime-project"
+				"",
+				"/D/project/wms-ci/wms-ci.sublime-project"
 			],
 			[
 				"new",
