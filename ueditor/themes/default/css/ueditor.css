@@ -1802,3 +1802,8 @@ div.edui-box {
 .edui-default  .edui-pastecontainer .edui-button  .edui-state-hover .edui-plaintxticon{
     background-position: -72px -34px;
 }
+.edui-for-coustom_resource .edui-dialog-content {
+    width: 560px;
+    height: 450px;
+    overflow: hidden;
+}

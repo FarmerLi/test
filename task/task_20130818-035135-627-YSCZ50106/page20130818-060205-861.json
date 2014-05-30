@@ -1,0 +1,28 @@
+{
+	"page":"page20130818-060205-861",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-060205-861_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"",
+			"titleEnglish":"",
+			"top":"45px",
+			"left":"483px",
+			"width":"437px",
+			"height":"48px",
+			"content":"<p>作为执行本次派送任务的取派员，需要为做好此次派送作业做些什么准备呢？请先认真思考并回答下面的问题：</p>"
+		},
+		{
+			"renderFunction":"renderText",
+			"title":"问题1：",
+			"titleEnglish":"",
+			"top":"101px",
+			"left":"483px",
+			"width":"435px",
+			"height":"120px",
+			"content":"<p>你是否有过这样的经历，春节到了，我们买了很多的礼物去探望几个亲戚，我们把这些礼物捆扎在摩托车的后座上，那么捆扎不同亲戚的礼物时，你有没有考虑过亲戚的地址呢？有没有什么先后顺序？在快递派送过程中，取派员就需要根据不同客户的快件进行综合考虑，并完成快件装载。那么你知道取派员遵循的原则是什么吗？</p>"
+		}
+	]
+}

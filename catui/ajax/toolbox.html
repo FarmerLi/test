@@ -1,0 +1,2708 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+		<h1 class="page-title txt-color-blueDark">
+			<i class="fa fa-edit fa-fw "></i> 
+				标准控件应用 
+		</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		
+		<div class="well">
+			<h1 class="semi-bold">应用说明</h1>
+		<p> 
+			我们从SmartAdmin框架中，筛选了一些G7系统用到的标准控件，根据需要规定控件的UI样式及使用规范。控件类型主要包含以下内容，使用范例请参看下文：
+		</p>
+		</div>
+		
+	</div>
+</div>
+
+<section id="widget-grid" class="">
+<div class="row">
+	<div class="col-sm-12">
+		<div class="jarviswidget jarviswidget-color-blueLight" id="wid-id-0" data-widget-sortable="true" data-widget-custombutton="true" data-widget-fullscreenbutton="false" data-widget-editbutton="false" role="widget">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header role="heading">
+					<div class="jarviswidget-ctrls" role="menu">   
+						<a data-placement="bottom" title="" rel="tooltip" class="button-icon jarviswidget-fullscreen-btn" href="javascript:void(0);" data-original-title="Fullscreen"><i class="fa fa-resize-full "></i></a>
+					</div>
+					<ul class="nav nav-tabs pull-left in">
+
+						<li>
+							<a href="#hr1" data-toggle="tab"> <i class="fa fa-lg fa-arrow-circle-o-down"></i> <span class="hidden-mobile hidden-tablet"> 表单类 </span> </a>
+						</li>
+						<li>
+							<a href="#hr2" data-toggle="tab"> <i class="fa fa-lg fa-arrow-circle-o-down"></i> <span class="hidden-mobile hidden-tablet"> UI样式  </span> </a>
+						</li>
+						<li>
+							<a href="#hr3" data-toggle="tab"> <i class="fa fa-lg fa-arrow-circle-o-down"></i> <span class="hidden-mobile hidden-tablet"> 消息提醒  </span> </a>
+						</li>
+						<li class="active">
+							<a href="#hr4" data-toggle="tab"> <i class="fa fa-lg fa-arrow-circle-o-down"></i> <span class="hidden-mobile hidden-tablet"> 状态和进度  </span> </a>
+						</li>
+						<!-- <li>
+							<a href="#hr5" data-toggle="tab"> <i class="fa fa-lg fa-arrow-circle-o-down"></i> <span class="hidden-mobile hidden-tablet"> 表格  </span> </a>
+						</li> -->
+
+					</ul>
+					<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+				</header>
+
+				<!-- widget div-->
+				<div role="content">
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+						<div class="widget-body-toolbar bg-color-white">
+
+								<p>widgets工具栏区域，可作为数据表格的搜索区使用</p>
+
+						</div>
+						<div class="tab-content padding-10">
+							<div id="hr1" class="tab-pane">
+								<h3>一般表单应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									所有表单应用，需在“&lt;form>”标签内实现，&lt;form/>标签的引用样式：class="smart-form"
+								</div>
+								<form action="" class="smart-form">
+								<table id="resultTable" class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th width="80px">表单类型</th>
+											<th width="320px">应用范例</th>
+											<th>说明</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>文本框</td>
+											<td>
+												<section>
+													<label class="label">普通文本框</label>
+													<label class="input">
+														<input type="text" maxlength="10">
+													</label>
+													<div class="note">
+														一些说明文字
+													</div>
+												</section>
+												<section>
+													<label class="label">文本框禁用</label>
+													<label class="input state-disabled">
+														<input type="text" maxlength="10" disabled="disabled">
+													</label>
+													<div class="note">
+														一些说明文字
+													</div>
+												</section>
+												<section>
+													<label class="label">填写校验成功</label>
+													<label class="input state-success">
+														<input type="text" maxlength="10">
+													</label>
+													<div class="note">
+														一些说明文字
+													</div>
+												</section>
+												<section>
+													<label class="label">填写校验失败</label>
+													<label class="input  state-error">
+														<input type="text" maxlength="10">
+													</label>
+													<div class="note">
+														一些说明文字
+													</div>
+												</section>
+												<section>
+													<label class="label">普通文本框(小尺寸)</label>
+													<label class="input">
+														<input type="text" class="input-sm" maxlength="10">
+													</label>
+													<div class="note">
+														一些说明文字
+													</div>
+												</section>
+												<section>
+													<label class="label">带帮助提示的输入框</label>
+													<label class="input"> <i class="icon-append fa fa-question-circle"></i>
+														<input type="text" placeholder="点击查看提示">
+														<b class="tooltip tooltip-top-right">
+															<i class="fa fa-warning txt-color-teal"></i> 
+															一些帮助说明提示</b> 
+													</label>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">填写格式错误&lt;/label>
+		&lt;label class="input  state-error">
+			&lt;input type="text" maxlength="10">
+		&lt;/label>
+		&lt;div class="note">
+			一些说明文字
+		&lt;/div>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+										  <td>日期框</td>
+										  <td>
+												<section>
+													<label class="label">普通日期框</label>
+													<label class="input">
+                                                    <i class="icon-prepend fa fa-calendar"></i>
+														<input type="text" maxlength="10" id="oneday" value="2014-02-01 13:00">
+													</label>
+													<div class="note">
+														可以不要时间
+													</div>
+                                                    </section>
+												<section>
+													<label class="label">日期段框</label>
+													<label class="input">
+                                                    <i class="icon-prepend fa fa-calendar"></i>
+														<input type="text" maxlength="10" id="reservation" value="2014-02-02 - 2014-02-15">
+													</label>
+													<div class="note">
+														说明文字
+													</div>
+                                                    </section>   
+												<section>
+													<label class="label">日期段+时间框</label>
+													<label class="input">
+                                                    <i class="icon-prepend fa fa-calendar"></i>
+														<input type="text" maxlength="10" id="reservationT" value="14-02-06 0:00 - 14-02-28 23:59">
+													</label>
+													<div class="note">
+														说明文字
+													</div>
+                                                    </section>   
+												   <script type="text/javascript">
+												   
+                                                   $(document).ready(function() {
+                                                      $('#oneday').daterangepicker({ 
+															singleDatePicker: true, //必须要有默input 认value
+															timePicker: true,		//是否启用时间选择
+                 										    timePickerIncrement:10,	//分钟选择的间隔
+        										            format: 'YYYY-MM-DD H:mm',	//返回值的格式
+															timePicker12Hour: false,	//采用24小时计时制
+															showDropdowns: true,		//是否显示年、月下拉框
+															});
+                                                   });
+												   
+                                                   $(document).ready(function() {
+                                                      $('#reservation').daterangepicker({ 
+															singleDatePicker: false,
+        										            format: 'YYYY-MM-DD',	//返回值的格式															
+															});
+                                                   });
+                                                   $(document).ready(function() {
+                                                      $('#reservationT').daterangepicker({ 
+															singleDatePicker: false,
+															timePicker: true,		//是否启用时间选择
+                 										    timePickerIncrement: 1,	//分钟选择的间隔
+        										            format: 'YY-MM-DD H:mm',	//返回值的格式
+															timePicker12Hour: false,	//采用24小时计时制
+															});
+                                                   });
+                                                   </script>                                                                                     
+                                          </td>
+										  <td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+                                                    自己看看代码吧
+                                                    项目地址：http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/
+													</code>
+												</pre>                                          
+                                          </td>
+									  </tr>
+										<tr>
+											<td>
+												文件上传选择框
+											</td>
+											<td>
+												<section>
+													<label class="label">文件上传</label>
+													<label for="file" class="input input-file ">
+														<div class="button"><input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">浏览</div><input type="text" placeholder="选择文件..." readonly="">
+													</label>
+												</section>
+												<section>
+													<label class="label">上传禁用</label>
+													<label for="file" class="input input-file state-disabled">
+														<div class="button disabled">
+															浏览
+														</div>
+														<input type="text" disabled="disabled">
+													</label>
+												</section>
+												<section>
+													<label class="label">校验成功</label>
+													<label for="file" class="input input-file state-success">
+														<div class="button"><input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">浏览</div><input type="text" placeholder="选择文件..." readonly="">
+													</label>
+												</section>
+												<section>
+													<label class="label">校验失败</label>
+													<label for="file" class="input input-file state-error">
+														<div class="button"><input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">浏览</div><input type="text" placeholder="选择文件..." readonly="">
+													</label>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">文件上传</label>
+		&lt;label for="file" class="input input-file  state-error">
+			&lt;div class="button">&lt;input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">浏览&lt;/div>
+			&lt;input type="text" placeholder="选择文件..." readonly="">
+		&lt;/label>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>下拉框</td>
+											<td>
+												<fieldset>
+												<section>
+													<label class="label">下拉框选择</label>
+													<label class="select">
+														<select>
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+												</section>
+												<section>
+													<label class="label">下拉框禁用</label>
+													<label class="select state-disabled">
+														<select disabled="disabled">
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+												</section>
+												<section>
+													<label class="label">校验成功</label>
+													<label class="select state-success">
+														<select>
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+												</section>
+												<section>
+													<label class="label">校验失败</label>
+													<label class="select state-error">
+														<select>
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+												</section>
+												</fieldset>
+												<fieldset>
+													
+												</fieldset>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">失败&lt;/label>
+		&lt;label class="select state-error">
+			&lt;select>
+				&lt;option value="0">北京&lt;/option>
+				&lt;option value="1">上海&lt;/option>
+				&lt;option value="2">广州&lt;/option>
+				&lt;option value="3">香港&lt;/option>
+				&lt;option value="4">台湾&lt;/option>
+			&lt;/select>&lt;i>&lt;/i> &lt;/label>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>多选下拉框</td>
+											<td>
+												<section>
+													<label class="label">多选下拉框</label>
+													<label class="select select-multiple">
+														<select multiple="" class="custom-scroll">
+															<option value="1">北京</option>
+															<option value="2">天津</option>
+															<option value="3">上海</option>
+															<option value="4">广州</option>
+															<option value="5">五月花</option>
+														</select> </label>
+													<div class="note">
+														<strong>Note:</strong> 鼠标拖动进行多项选择
+													</div>
+												</section>
+												<section>
+													<label class="label">多选框禁用</label>
+													<label class="select select-multiple state-disabled">
+														<select multiple="" class="custom-scroll" disabled="disabled">
+															<option value="1">北京</option>
+															<option value="2">天津</option>
+															<option value="3">上海</option>
+															<option value="4">广州</option>
+															<option value="5">五月花</option>
+														</select> </label>
+													<div class="note">
+														<strong>Note:</strong> 鼠标拖动进行多项选择
+													</div>
+												</section>
+												<section>
+													<label class="label">校验成功</label>
+													<label class="select select-multiple  state-success">
+														<select multiple="" class="custom-scroll">
+															<option value="1">北京</option>
+															<option value="2">天津</option>
+															<option value="3">上海</option>
+															<option value="4">广州</option>
+															<option value="5">五月花</option>
+														</select> </label>
+													<div class="note">
+														<strong>Note:</strong> 鼠标拖动进行多项选择
+													</div>
+												</section>
+												<section>
+													<label class="label">校验失败</label>
+													<label class="select select-multiple  state-error">
+														<select multiple="" class="custom-scroll">
+															<option value="1">北京</option>
+															<option value="2">天津</option>
+															<option value="3">上海</option>
+															<option value="4">广州</option>
+															<option value="5">五月花</option>
+														</select> </label>
+													<div class="note">
+														<strong>Note:</strong> 鼠标拖动进行多项选择
+													</div>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">多选下拉框&lt;/label>
+		&lt;label class="select select-multiple">
+			&lt;select multiple="" class="custom-scroll">
+				&lt;option value="1">北京&lt;/option>
+				&lt;option value="2">天津&lt;/option>
+				&lt;option value="3">上海&lt;/option>
+				&lt;option value="4">广州&lt;/option>
+				&lt;option value="5">五月花&lt;/option>
+			&lt;/select> &lt;/label>
+		&lt;div class="note">
+			&lt;strong>Note:&lt;/strong> 鼠标拖动进行多项选择
+		&lt;/div>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>文本区域</td>
+											<td>
+												<section>
+													<label class="label">文本区域</label>
+													<label class="textarea"> 										
+														<textarea rows="3" class="custom-scroll"></textarea> 
+													</label>
+													<div class="note">
+														<strong>Note:</strong> 给一些说明
+													</div>
+												</section>
+												<section>
+													<label class="label">文本区域禁用</label>
+													<label class="textarea state-disabled""> 										
+														<textarea rows="3" class="custom-scroll"  disabled="disabled"></textarea> 
+													</label>
+													<div class="note">
+														<strong>Note:</strong> 给一些说明
+													</div>
+												</section>
+												<section>
+													<label class="label">校验成功</label>
+													<label class="textarea  state-success"> 										
+														<textarea rows="3" class="custom-scroll"></textarea> 
+													</label>
+													<div class="note">
+														<strong>Note:</strong> 给一些说明
+													</div>
+												</section>
+												<section>
+													<label class="label">填写校验失败</label>
+													<label class="textarea  state-error"> 										
+														<textarea rows="3" class="custom-scroll"></textarea> 
+													</label>
+													<div class="note">
+														<strong>Note:</strong> 给一些说明
+													</div>
+												</section>
+												<section>
+													<label class="label">自动展开文本区域</label>
+													<label class="textarea textarea-expandable"> 										
+														<textarea rows="3" class="custom-scroll"></textarea> 
+													</label>
+													<div class="note">
+														<strong>Note:</strong> 鼠标点击时自动展开
+													</div>
+												</section>
+												<section>
+													<label class="label">带说明的文本区域</label>
+													<label class="textarea"> <i class="icon-append fa fa-question-circle"></i> 										
+														<textarea placeholder="点击弹出说明" rows="3"></textarea>
+														<b class="tooltip tooltip-top-right"> 
+															<i class="fa fa-warning txt-color-teal"></i> 
+															提供说明信息 </b> 
+													</label>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">文本区域&lt;/label>
+		&lt;label class="textarea"> 										
+			&lt;textarea rows="3" class="custom-scroll">&lt;/textarea> 
+		&lt;/label>
+		&lt;div class="note">
+			&lt;strong>Note:&lt;/strong> 给一些说明
+		&lt;/div>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>单选按钮</td>
+											<td>
+												<section>
+													<label class="label">单选按钮（单行应用）</label>
+													<div class="inline-group">
+														<label class="radio">
+															<input type="radio" name="radio-inline" checked="checked">
+															<i></i>Alexandra</label>
+														<label class="radio">
+															<input type="radio" name="radio-inline">
+															<i></i>Alice</label>
+														<label class="radio">
+															<input type="radio" name="radio-inline">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">单选按钮禁用</label>
+													<div class="inline-group">
+														<label class="radio state-disabled">
+															<input type="radio" name="radio-inline" checked="checked">
+															<i></i>Alexandra</label>
+														<label class="radio state-disabled">
+															<input type="radio" name="radio-inline" disabled="disabled">
+															<i></i>Alice</label>
+														<label class="radio state-disabled">
+															<input type="radio" name="radio-inline" disabled="disabled">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">单选按钮校验成功</label>
+													<div class="inline-group">
+														<label class="radio state-success">
+															<input type="radio" name="radio-inline1">
+															<i></i>Alexandra</label>
+														<label class="radio state-success">
+															<input type="radio" name="radio-inline1">
+															<i></i>Alice</label>
+														<label class="radio state-success">
+															<input type="radio" name="radio-inline1">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">单选按钮校验失败</label>
+													<div class="inline-group">
+														<label class="radio state-error">
+															<input type="radio" name="radio-inline2">
+															<i></i>Alexandra</label>
+														<label class="radio state-error">
+															<input type="radio" name="radio-inline2">
+															<i></i>Alice</label>
+														<label class="radio state-error">
+															<input type="radio" name="radio-inline2">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">单选按钮(多列应用)</label>
+													<div class="row">
+														<div class="col col-4">
+															<label class="radio">
+																<input type="radio" name="radio" checked="checked">
+																<i></i>Alexandra</label>
+															<label class="radio">
+																<input type="radio" name="radio">
+																<i></i>Alice</label>
+															<label class="radio">
+																<input type="radio" name="radio">
+																<i></i>Anastasia</label>
+														</div>
+														<div class="col col-4">
+															<label class="radio">
+																<input type="radio" name="radio">
+																<i></i>Avelina</label>
+															<label class="radio">
+																<input type="radio" name="radio">
+																<i></i>Basilia</label>
+															<label class="radio">
+																<input type="radio" name="radio">
+																<i></i>Beatrice</label>
+														</div>
+													</div>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">单选按钮禁用&lt;/label>
+		&lt;div class="inline-group">
+			&lt;label class="radio state-disabled">
+				&lt;input type="radio" name="radio-inline" checked="checked">
+				&lt;i>&lt;/i>Alexandra&lt;/label>
+			&lt;label class="radio state-disabled">
+				&lt;input type="radio" name="radio-inline" disabled="disabled">
+				&lt;i>&lt;/i>Alice&lt;/label>
+			&lt;label class="radio state-disabled">
+				&lt;input type="radio" name="radio-inline" disabled="disabled">
+				&lt;i>&lt;/i>Anastasia&lt;/label>
+		&lt;/div>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>复选框</td>
+											<td>
+												<section>
+													<label class="label">复选框</label>
+													<div class="inline-group">
+														<label class="checkbox">
+															<input type="checkbox" name="checkbox-inline" checked="checked">
+															<i></i>Alexandra</label>
+														<label class="checkbox">
+															<input type="checkbox" name="checkbox-inline">
+															<i></i>Alice</label>
+														<label class="checkbox">
+															<input type="checkbox" name="checkbox-inline">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">复选框禁用</label>
+													<div class="inline-group">
+														<label class="checkbox state-disabled">
+															<input type="checkbox" name="checkbox-inline" checked="checked" disabled="disabled">
+															<i></i>Alexandra</label>
+														<label class="checkbox state-disabled">
+															<input type="checkbox" name="checkbox-inline" disabled="disabled">
+															<i></i>Alice</label>
+														<label class="checkbox state-disabled">
+															<input type="checkbox" name="checkbox-inline" disabled="disabled">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">复选框校验成功</label>
+													<div class="inline-group">
+														<label class="checkbox state-success">
+															<input type="checkbox" name="checkbox-inline" checked="checked">
+															<i></i>Alexandra</label>
+														<label class="checkbox state-success">
+															<input type="checkbox" name="checkbox-inline" >
+															<i></i>Alice</label>
+														<label class="checkbox state-success">
+															<input type="checkbox" name="checkbox-inline">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">复选框校验失败</label>
+													<div class="inline-group">
+														<label class="checkbox state-error">
+															<input type="checkbox" name="checkbox-inline" checked="checked">
+															<i></i>Alexandra</label>
+														<label class="checkbox state-error">
+															<input type="checkbox" name="checkbox-inline" >
+															<i></i>Alice</label>
+														<label class="checkbox state-error">
+															<input type="checkbox" name="checkbox-inline">
+															<i></i>Anastasia</label>
+													</div>
+												</section>
+												<section>
+													<label class="label">复选框（多列）</label>
+													<div class="row">
+														<div class="col col-4">
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox" checked="checked">
+																<i></i>Alexandra</label>
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox">
+																<i></i>Alice</label>
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox">
+																<i></i>Anastasia</label>
+														</div>
+														<div class="col col-4">
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox">
+																<i></i>Avelina</label>
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox">
+																<i></i>Basilia</label>
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox">
+																<i></i>Beatrice</label>
+														</div>
+													</div>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">复选框成功&lt;/label>
+		&lt;div class="inline-group">
+			&lt;label class="checkbox state-success">
+				&lt;input type="checkbox" name="checkbox-inline" checked="checked">
+				&lt;i>&lt;/i>Alexandra&lt;/label>
+			&lt;label class="checkbox state-success">
+				&lt;input type="checkbox" name="checkbox-inline" >
+				&lt;i>&lt;/i>Alice&lt;/label>
+			&lt;label class="checkbox state-success">
+				&lt;input type="checkbox" name="checkbox-inline">
+				&lt;i>&lt;/i>Anastasia&lt;/label>
+		&lt;/div>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<section>
+													<label class="label">开关型单选</label>
+													<label class="toggle">
+														<input type="radio" name="radio-toggle" checked="checked">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Alexandra</label>
+													<label class="toggle">
+														<input type="radio" name="radio-toggle">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Anastasia</label>
+													<label class="toggle">
+														<input type="radio" name="radio-toggle">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Avelina</label>
+												</section>
+
+												<section>
+													<label class="label">开关型复选</label>
+													<label class="toggle">
+														<input type="checkbox" name="checkbox-toggle" checked="checked">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Cassandra</label>
+													<label class="toggle">
+														<input type="checkbox" name="checkbox-toggle">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Clemencia</label>
+													<label class="toggle">
+														<input type="checkbox" name="checkbox-toggle">
+														<i data-swchon-text="开" data-swchoff-text="关"></i>Desiderata</label>
+												</section>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;section>
+		&lt;label class="label">开关型单选&lt;/label>
+		&lt;label class="toggle">
+			&lt;input type="radio" name="radio-toggle" checked="checked">
+			&lt;i data-swchon-text="开" data-swchoff-text="关">&lt;/i>Alexandra&lt;/label>
+		&lt;label class="toggle">
+			&lt;input type="radio" name="radio-toggle">
+			&lt;i data-swchon-text="开" data-swchoff-text="关">&lt;/i>Anastasia&lt;/label>
+		&lt;label class="toggle">
+			&lt;input type="radio" name="radio-toggle">
+			&lt;i data-swchon-text="开" data-swchoff-text="关">&lt;/i>Avelina&lt;/label>
+	&lt;/section>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							  </form>
+								<h3>格式化表单应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									表单排列，表单输入格式化等
+								</div>
+								<!-- <div class="well">
+									<form action="" class="form-horizontal">
+										<fieldset>
+											<legend>信息分组1</legend>
+											
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="text-field" class="col-md-4 control-label">普通输入框</label>
+													<div class="col-md-8">
+														<input type="text" placeholder="Default Text Field" class="form-control">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="text-field" class="col-md-4 control-label">自动完成输入框</label>
+													<div class="col-md-8">
+														<input type="text" list="list" placeholder="Type somethine..." class="form-control">
+														<datalist id="list">
+															<option value="Alexandra"></option>
+															<option value="Alice"></option>
+															<option value="Anastasia"></option>
+														</datalist> 
+														
+													</div>
+												</div>
+											</div>
+				
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label class="col-md-4 control-label">密码输入框</label>
+													<div class="col-md-8">
+														<input type="password" value="mypassword" placeholder="Password field" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label class="col-md-4 control-label">密码输入框</label>
+													<div class="col-md-8">
+														<input type="password" value="mypassword" placeholder="Password field"  disabled="disabled" class="form-control">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label class="col-md-4 control-label">带图标输入框</label>
+													<div class="col-md-8">
+														<div class="row">
+															<div class="col-sm-12 input-icon-right">
+																
+																<div class="input-icon-right">
+																	<i class="fa fa-microphone"></i>
+																	<input type="text" placeholder="" class="form-control">
+																</div>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label class="col-md-4 control-label">带图标输入框</label>
+													<div class="col-md-8">
+														<div class="row">
+															<div class="col-sm-12 input-icon-right">
+																
+																<div class="input-icon-right">
+																	<i class="fa fa-microphone"></i>
+																	<input type="text" placeholder="" disabled="disabled" class="form-control">
+																</div>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="textarea" class="col-md-4 control-label">Textarea</label>
+													<div class="col-md-8">
+														<textarea rows="4" placeholder="Textarea" class="form-control"></textarea>
+													</div>
+												</div>
+											</div>
+											
+										</fieldset>
+										<fieldset>
+											<legend>信息分组2</legend>
+											
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="text-field" class="col-md-4 control-label">普通输入框</label>
+													<div class="col-md-8">
+														<input type="text" placeholder="Default Text Field" class="form-control">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="text-field" class="col-md-4 control-label">自动完成输入框</label>
+													<div class="col-md-8">
+														<input type="text" list="list" placeholder="Type somethine..." class="form-control">
+														<datalist id="list">
+															<option value="Alexandra"></option>
+															<option value="Alice"></option>
+															<option value="Anastasia"></option>
+														</datalist> 
+														
+													</div>
+												</div>
+											</div>
+										</fieldset>
+										<div class="form-actions">
+											<div class="row">
+												<div class="col-md-12">
+													<button type="submit" class="btn btn-default">
+														Cancel
+													</button>
+													<button type="submit" class="btn btn-primary">
+														<i class="fa fa-save"></i>
+														Submit
+													</button>
+												</div>
+											</div>
+										</div>
+										
+									</form>
+								</div>
+								<div class="row"><br /></div> -->
+								<div class="well bg-color-white no-padding">
+									<form action="" class="smart-form">
+										<header>信息分组1</header>
+										<fieldset>
+											
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">普通输入框</label>
+													<section class="col col-8">
+														<label class="input">
+															<input type="text" name="tid" placeholder="车牌号">
+														</label>
+													</section>
+												</div>
+											</div>
+
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">下拉选择框</label>
+													<section class="col col-8">
+														<label class="select">
+														<select>
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+													</section>
+												</div>
+											</div>
+				
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">带提示输入框</label>
+													<section class="col col-8">
+														<label class="input">
+															<i class="icon-append fa fa-user"></i>
+															<input type="text" name="card" placeholder="IC卡号码">
+															<b class="tooltip tooltip-top-right">请输入汉字</b>
+														</label>
+													</section>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">格式输入框</label>
+													<section class="col col-8">
+														<label class="input">
+															<input type="text" name="card" placeholder="Card number" data-mask="9999-9999-9999-9999">
+														</label>
+													</section>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">格式输入框</label>
+													<section class="col col-8">
+														<label class="input">
+															<input type="text" name="card" placeholder="Card number" data-mask="9999-9999-9999-9999">
+														</label>
+													</section>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+												<div class="row">
+													<label class="label col col-4 text-align-right">禁用输入框</label>
+													<section class="col col-8">
+														<label class="input state-disabled">
+															<input type="text" name="card" placeholder="Card number" disabled="disabled" data-mask="9999-9999-9999-9999">
+														</label>
+													</section>
+												</div>
+											</div>
+										</fieldset>
+										
+										<footer>
+													<button type="submit" class="btn btn-default">取消</button>
+													<button type="submit" class="btn btn-primary">
+														<i class="fa fa-save"></i>
+														提交
+													</button>
+												
+										</footer>
+										
+									</form>
+								</div>
+								<div class="row"><br /></div>
+								<div class="well bg-color-white">
+									<!-- <form role="form" class="form-inline">
+										<fieldset>
+											<div class="form-group">
+												<label for="exampleInputEmail2" class="">Email address</label>
+												<input type="email" placeholder="Enter email" id="exampleInputEmail2" class="form-control input-sm">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword2" class="">Password</label>
+												<input type="password" placeholder="Password" id="exampleInputPassword2" class="form-control input-sm">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword2" class="">Password</label>
+												<input type="password" placeholder="Password" id="exampleInputPassword2" class="form-control input-sm">
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" class="checkbox">
+													<span>Remember me </span></label>
+											</div>
+											<button class="btn btn-primary  btn-sm" type="submit">
+												Sign in
+											</button>
+										</fieldset>
+										
+									</form> -->
+									<form role="form" class="smart-form">
+										<header>搜索表单应用</header>
+										<fieldset>
+											<table>
+												<tr>
+													<td>
+														<label class="label col col-4 text-align-right">车牌号码</label>
+														<section class="col col-8">
+															<label class="input">
+																<input type="text" name="tid" placeholder="车牌号" class="input-sm">
+															</label>
+														</section>
+													</td>
+													<td>
+														<label class="label col col-4 text-align-right">司机姓名按税法</label>
+														<section class="col col-8">
+															<label class="input">
+																<input type="text" name="tid" placeholder="司机" class="input-sm">
+															</label>
+														</section>
+													</td>
+													<td>
+													
+														<label class="label col col-4 text-align-right">选择城市</label>
+														<section class="col col-8">
+															<label class="select">
+																<select>
+																	<option value="0">北京</option>
+																	<option value="1">上海</option>
+																	<option value="2">广州</option>
+																	<option value="3">香港</option>
+																	<option value="4">台湾</option>
+																</select> <i></i> </label>
+														</section>
+														
+													</td>
+													<td>
+														<section class="col col-12">
+															<label class="checkbox">
+																<input type="checkbox" name="checkbox-inline" checked="checked">
+																<i></i>有GPS</label>
+														</section>
+														
+													</td>
+													<td>
+														<section class="col col-12">
+														<button class="btn btn-primary  btn-sm" type="button">搜索</button>
+														</section>
+													</td>
+												</tr>
+											</table>
+										
+										
+									</form>
+									<!-- <form action="" class="smart-form">
+										<fieldset>
+											<legend>单行应用</legend>
+											<div class="row">
+												<section class="col col-2">
+													<label class="label">日期</label>
+													<label class="input"> <i class="icon-append fa fa-calendar"></i>
+														<input type="text" placeholder="Expected finish date" id="finishdate" name="finishdate" class="hasDatepicker input-sm">
+													</label>
+												</section>
+												
+												<section class="col col-2">
+													<label class="label">姓名</label>
+													<label class="input"> 
+														<input type="text" name="name" class="input-sm">
+													</label>
+												</section>
+												<section class="col col-2">
+													<label class="label">邮箱</label>
+													<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+														<input type="email" name="email"  class="input-sm">
+													</label>
+												</section>
+												<section class="col col-2">
+													<label class="label">电话</label>
+													<label class="input"> <i class="icon-append fa fa-phone"></i>
+														<input type="tel" data-mask="9999-9999-999" placeholder="Phone" name="phone" class="input-sm">
+													</label>
+												</section>
+												<section class="col col-2">
+													<label class="label">地区</label>
+													<label class="select">
+														<select class="input-sm">
+															<option value="0">北京</option>
+															<option value="1">上海</option>
+															<option value="2">广州</option>
+															<option value="3">香港</option>
+															<option value="4">台湾</option>
+														</select> <i></i> </label>
+												</section>
+												<section class="col col-2">
+													<button class="btn btn-primary" type="submit">搜索</button>
+												</section>
+											</div>
+											
+										</fieldset>
+									</form> -->
+								</div>
+							</div>
+							<div id="hr2" class="tab-pane">
+								<h3>按钮应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									按钮采用3种色系：蓝色、白色和红色
+								</div>
+								<table id="resultTable" class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th width="80px">按钮类型</th>
+											<th width="480px">应用范例</th>
+											<th>说明</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>按钮</td>
+											<td>
+												<h6>普通</h6><a href="javascript:void(0);" class="btn btn-primary">蓝色按钮</a> <a href="javascript:void(0);" class="btn btn-default">白色按钮</a> <a href="javascript:void(0);" class="btn btn-danger">红色按钮</a>
+												<h6>小按钮，用于表格中</h6><a href="javascript:void(0);" class="btn btn-primary btn-xs">蓝色按钮</a> <a href="javascript:void(0);" class="btn btn-default btn-xs">白色按钮</a> <a href="javascript:void(0);" class="btn btn-danger btn-xs">红色按钮</a>
+												<h6>按钮禁用</h6><a href="javascript:void(0);" class="btn btn-primary disabled">蓝色按钮</a> <a href="javascript:void(0);" class="btn btn-default disabled">白色按钮</a> <a href="javascript:void(0);" class="btn btn-danger disabled">红色按钮</a>
+												<h6>带图标按钮</h6><a href="javascript:void(0);" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> 蓝色按钮</a> <a href="javascript:void(0);" class="btn btn-default"><i class="fa fa-shopping-cart"></i> 白色按钮</a> <a href="javascript:void(0);" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> 红色按钮</a>
+												
+												<h6>按钮下拉菜单</h6>
+												<!-- <div class="btn-group">
+													<a href="javascript:void(0);" class="btn btn-primary">蓝色按钮</a>
+													<a href="javascript:void(0);" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="javascript:void(0);">第一项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第二项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第三项操作</a>
+														</li>
+														<li class="divider"></li>
+														<li>
+															<a href="javascript:void(0);">第四项操作</a>
+														</li>
+													</ul>
+												</div> -->
+												<div class="btn-group">
+													<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+														蓝色按钮 <span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="javascript:void(0);">第一项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第二项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第三项操作</a>
+														</li>
+														<li class="divider"></li>
+														<li>
+															<a href="javascript:void(0);">第四项操作</a>
+														</li>
+													</ul>
+												</div>
+												<div class="btn-group">
+													<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+														白色按钮 <span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="javascript:void(0);">第一项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第二项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第三项操作</a>
+														</li>
+														<li class="divider"></li>
+														<li>
+															<a href="javascript:void(0);">第四项操作</a>
+														</li>
+													</ul>
+												</div>
+												<div class="btn-group">
+													<button data-toggle="dropdown" class="btn btn-danger dropdown-toggle">
+														红色按钮 <span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="javascript:void(0);">第一项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第二项操作</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">第三项操作</a>
+														</li>
+														<li class="divider"></li>
+														<li>
+															<a href="javascript:void(0);">第四项操作</a>
+														</li>
+													</ul>
+												</div>
+												<h6>自适应按钮</h6><button class="btn btn-primary btn-block" type="button">
+													自适应按钮
+												</button>
+											</td>
+											<td>
+												<pre>
+													<h6>使用说明：</h6>
+													蓝色：推荐默认动作，如保存、下一步、应用、确定等
+													白色：还原动作，如关闭、取消、稍后决定等
+													红色：对数据有操作的危险动作，如删除、取消关系、修改状态等
+												</pre>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	普通：&lt;a href="javascript:void(0);" class="btn btn-primary">蓝色按钮&lt;/a>
+	小按钮，用于表格中:&lt;a href="javascript:void(0);" class="btn btn-primary btn-xs">蓝色按钮&lt;/a>
+	按钮禁用：&lt;a href="javascript:void(0);" class="btn btn-primary disabled">蓝色按钮&lt;/a>
+	带图标按钮：&lt;a href="javascript:void(0);" class="btn btn-primary">&lt;i class="fa fa-shopping-cart">&lt;/i> 蓝色按钮&lt;/a>
+	按钮下拉菜单:<br />
+	&lt;div class="btn-group">
+	&lt;button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+		蓝色按钮 &lt;span class="caret">&lt;/span>
+	&lt;/button>
+	&lt;ul class="dropdown-menu">
+		&lt;li>
+			&lt;a href="javascript:void(0);">第一项操作&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">第二项操作&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">第三项操作&lt;/a>
+		&lt;/li>
+		&lt;li class="divider">&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">第四项操作&lt;/a>
+		&lt;/li>
+	&lt;/ul>
+												</div>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										
+										<tr>
+											<td>圆形按钮<br></td>
+											<td>
+												<p>
+													大个的圆形按钮
+													<code>
+														.btn-circle .btn-xl
+													</code>
+												</p>
+												<ul class="demo-btns">
+													<li>
+														<a class="btn btn-primary btn-circle btn-xl" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a>
+													</li>
+													<li>
+														<a class="btn btn-default btn-circle btn-xl" href="javascript:void(0);"><i class="glyphicon glyphicon-ok"></i></a>
+													</li>						
+												</ul>
+
+												<p>
+													稍大圆形按钮
+													<code>
+														.btn-circle .btn-lg
+													</code>
+												</p>
+												<ul class="demo-btns">
+													<li>
+														<a class="btn btn-primary btn-circle btn-lg" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a>
+													</li>						
+													<li>
+														<a class="btn btn-default btn-circle btn-lg" href="javascript:void(0);"><i class="glyphicon glyphicon-ok"></i></a>
+													</li>					
+												</ul>
+
+												<p>
+													普通圆形按钮
+													<code>
+														.btn-circle
+													</code>
+												</p>
+												<ul class="demo-btns">
+													<li>
+														<a class="btn btn-primary btn-circle" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a>
+													</li>
+													<li>
+														<a class="btn btn-default btn-circle" href="javascript:void(0);"><i class="glyphicon glyphicon-ok"></i></a>
+													</li>			
+												</ul>
+											</td>
+											<td>
+												<pre>
+													<h6>使用说明：</h6>
+													自动计算类且有过程展示的最后一个动作用圆形按钮，如开始自动调度等
+												</pre>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	稍大圆形按钮：<br />&lt;a class="btn btn-primary btn-circle btn-xl" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-list">&lt;/i>&lt;/a>
+	<br />&lt;a class="btn btn-default btn-circle btn-xl" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-ok">&lt;/i>&lt;/a>
+	稍大圆形按钮：<br />&lt;a class="btn btn-primary btn-circle btn-lg" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-list">&lt;/i>&lt;/a>
+	<br />&lt;a class="btn btn-default btn-circle btn-lg" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-ok">&lt;/i>&lt;/a>
+	稍大圆形按钮：<br />&lt;a class="btn btn-primary btn-circle" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-list">&lt;/i>&lt;/a>
+	<br />&lt;a class="btn btn-default btn-circle" href="javascript:void(0);">&lt;i class="glyphicon glyphicon-ok">&lt;/i>&lt;/a>
+	
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>按钮分组</td>
+											<td>
+												<div class="btn-group">
+													<button class="btn btn-default btn-primary" type="button">
+														Left
+													</button>
+													<button class="btn btn-default btn-primary" type="button">
+														Middle
+													</button>
+													<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-primary" type="button">
+														Dropdown
+														<i class="fa fa-caret-down"></i>
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="javascript:void(0);">Dropdown link</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">Dropdown link</a>
+														</li>
+													</ul>
+												</div>
+												<h6>按钮组</h6>
+												<div class="btn-toolbar">
+													<div class="btn-group">
+														<button class="btn btn-default" type="button">
+															1
+														</button>
+														<button class="btn btn-default" type="button">
+															2
+														</button>
+														<button class="btn btn-default" type="button">
+															3
+														</button>
+														<button class="btn btn-default" type="button">
+															4
+														</button>
+													</div>
+													<div class="btn-group">
+														<button class="btn btn-default" type="button">
+															5
+														</button>
+														<button class="btn btn-default" type="button">
+															6
+														</button>
+														<button class="btn btn-default" type="button">
+															7
+														</button>
+													</div>
+													<div class="btn-group">
+														<button class="btn btn-default" type="button">
+															8
+														</button>
+													</div>
+												</div>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;div class="btn-group">
+		&lt;button class="btn btn-default btn-primary" type="button"> Left &lt;/button>
+		&lt;button class="btn btn-default btn-primary" type="button"> Middle &lt;/button>
+		&lt;button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-primary" type="button"> Dropdown &lt;i class="fa fa-caret-down">&lt;/i>
+		&lt;/button>
+		&lt;ul class="dropdown-menu">
+			&lt;li>
+				&lt;a href="javascript:void(0);">Dropdown link&lt;/a>
+			&lt;/li>
+			&lt;li>
+				&lt;a href="javascript:void(0);">Dropdown link&lt;/a>
+			&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+													</code>
+												</pre>
+											</td>
+										</tr>
+										<tr>
+											<td>翻页效果</td>
+											<td>
+												<div class="text-center">
+													<ul class="pagination pagination-sm">
+														<li>
+															<a href="javascript:void(0);"><i class="fa fa-angle-left"></i></a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">1</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">2</a>
+														</li>
+														<li class="active">
+															<a href="javascript:void(0);">3</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">4</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a>
+														</li>
+													</ul>
+												</div>
+											</td>
+											<td>
+												<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;ul class="pagination pagination-sm">
+		&lt;li>
+			&lt;a href="javascript:void(0);">&lt;i class="fa fa-angle-left">&lt;/i>&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">1&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">2&lt;/a>
+		&lt;/li>
+		&lt;li class="active">
+			&lt;a href="javascript:void(0);">3&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">4&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="javascript:void(0);">&lt;i class="fa fa-angle-right">&lt;/i>&lt;/a>
+		&lt;/li>
+	&lt;/ul>
+													</code>
+												</pre>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<h3>tab标签应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									tab页签，包括顶部页签和左侧页签
+								</div>
+								<div class="well">
+									<div class="row">
+										<div class="col-sm-6">
+											<h6 class="txt-color-red">顶部页签应用</h6>
+											<div class="tab-content">
+												<div id="hr2" class="tab-pane active">
+													<ul class="nav nav-tabs">
+														<li class="active">
+															<a data-toggle="tab" href="#iss1">Item 1</a>
+														</li>
+														<li>
+															<a data-toggle="tab" href="#iss2">Item 2</a>
+														</li>
+														<li>
+															<a data-toggle="tab" href="#iss3">Item 3</a>
+														</li>
+													</ul>
+													<div class="tab-content padding-10">
+														<div id="iss1" class="tab-pane active">
+															<p>
+																中新网杭州1月27日电 (见习记者 谢盼盼)在持续18天的人感染H7N9禽流感新增病例报告后，27日是浙江省卫生计生委首次未通报病例新增的日子。
+															</p>
+														</div>
+														<div id="iss2" class="tab-pane fade">
+															<p>
+																记者了解到，在49例病例中有41例有过禽类接触史，确诊的患者分布在杭州、宁波、绍兴、湖州、台州、嘉兴、金华、温州等8个地市的24个县(市、区)。
+															</p>
+														</div>
+														<div id="iss3" class="tab-pane fade">
+															<p>
+																自1月9日以来，浙江已连续18天报告有新增病例，而2周内病例数超过2例的县(市、区)有萧山区、滨江区、余杭区、鄞州区、慈溪市、越城区、柯桥区、诸暨市、德清县、吴兴区、椒江区等11个。
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<h6 class="txt-color-red">左侧页签应用</h6>
+											<div class="tabs-left">
+												<ul id="demo-pill-nav" class="nav nav-tabs tabs-left">
+													<li class="active">
+														<a data-toggle="tab" href="#tab-r1"><span class="badge bg-color-blue txt-color-white">12</span> Item 1 </a>
+													</li>
+													<li class="">
+														<a data-toggle="tab" href="#tab-r2"><span class="badge bg-color-blueDark txt-color-white">3</span> Item 2</a>
+													</li>
+													<li class="">
+														<a data-toggle="tab" href="#tab-r3"><span class="badge bg-color-greenLight txt-color-white">0</span> Item 3</a>
+													</li>
+												</ul>
+												<div class="tab-content">
+													<div id="tab-r1" class="tab-pane active">
+														<p>
+															近期的疫情有如下特点：一是病例的发生地区进一步扩大。新发病县(市、区)不断出现，呈蔓延趋势。
+														</p>
+
+														<p>
+															卫生专家提醒公众，预防人感染H7N9禽流感要多洗手、勤锻炼；去涉禽场所要戴口罩；尽量避免接触活禽，购买“杀白”禽类或禽类制品。
+														</p>
+													</div>
+													<div id="tab-r2" class="tab-pane">
+														<p>
+															人民网北京1月26日电据浙江省卫生计生委网站消息，浙江省卫生计生委1月25日通报，浙江省当日新增3例人感染H7N9禽流感病例。
+														</p>
+													</div>
+													<div id="tab-r3" class="tab-pane">
+														<p>
+															悉，自1月9日确诊1例人感染H7N9禽流感病例以来至今，浙江已连续17天出现新增人感染H7N9禽流感患者
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="row"></div>
+											<h6 class="txt-color-red">页签在widgets中应用</h6>
+												<p>
+													Tabs inside
+													<code>
+														.jarviswidget .well
+													</code>
+													(Bordered Tabs)
+												</p>
+											<div class="widget-body">
+												
+												<hr class="simple">
+												<ul class="nav nav-tabs bordered" id="myTab1">
+													<li class="active">
+														<a data-toggle="tab" href="#s1">右侧页签 <span class="badge bg-color-blue txt-color-white">12</span></a>
+													</li>
+													<li>
+														<a data-toggle="tab" href="#s2"><i class="fa fa-fw fa-lg fa-gear"></i> 页签2</a>
+													</li>
+													<li class="dropdown">
+														<a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);">下拉菜单 <b class="caret"></b></a>
+														<ul class="dropdown-menu">
+															<li>
+																<a data-toggle="tab" href="#s3">@fat</a>
+															</li>
+															<li>
+																<a data-toggle="tab" href="#s4">@mdo</a>
+															</li>
+														</ul>
+													</li>
+													<li class="pull-right">
+														<a href="javascript:void(0);">
+														<div data-sparkline-barwidth="7" data-sparkline-width="90px" data-sparkline-height="18px" class="sparkline txt-color-pinkDark text-align-right"><canvas style="display: inline-block; width: 52px; height: 18px; vertical-align: top;" width="52" height="18"></canvas></div> </a>
+													</li>
+												</ul>
+
+												<div class="tab-content padding-10" id="myTabContent1">
+													<div id="s1" class="tab-pane fade in active">
+														<p>
+															A股企业爱施德(002416)日前发布公告，宣布已完成对迈奔灵动（即机锋网）第一部分股权收购，直接持有迈奔灵动67.88%的股权，为迈奔灵动控股股东，还将寻求全资收购机锋网。
+														</p>
+													</div>
+													<div id="s2" class="tab-pane fade">
+														<p>
+															爱施德近年来一直在寻找移动互联网业务最佳入口标的，很快将获移动转售牌照，间接使得机锋网将拥有其他第三方应用商店所不具备的管道特权
+														</p>
+													</div>
+													<div id="s3" class="tab-pane fade">
+														<p>
+															机锋网无疑在爱施德向移动互联网转型中扮演关键角色。那么，在软银1亿美元投资豌豆荚、百度19亿美元收购91无线后，机锋网如何突围，爱施德和机锋网有怎样的整合计划？
+														</p>
+													</div>
+													<div id="s4" class="tab-pane fade">
+														<p>
+															Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table.
+														</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<pre>
+													<h6>代码格式：</h6>
+													<code>
+	&lt;div class="tabs-left">
+		&lt;ul id="demo-pill-nav" class="nav nav-tabs tabs-left">
+			&lt;li class="active">
+				&lt;a data-toggle="tab" href="#tab-r1">&lt;span class="badge bg-color-blue txt-color-white">12&lt;/span> Item 1 &lt;/a>
+			&lt;/li>
+			&lt;li>
+				&lt;a data-toggle="tab" href="#tab-r2">&lt;span class="badge bg-color-blueDark txt-color-white">3&lt;/span> Item 2&lt;/a>
+			&lt;/li>
+			&lt;li>
+				&lt;a data-toggle="tab" href="#tab-r3">&lt;span class="badge bg-color-greenLight txt-color-white">0&lt;/span> Item 3&lt;/a>
+			&lt;/li>
+		&lt;/ul>
+		&lt;div class="tab-content">
+			&lt;div id="tab-r1" class="tab-pane active">
+				&lt;p>近期的疫情有如下特点：一是病例的发生地区进一步扩大。新发病县(市、区)不断出现，呈蔓延趋势。&lt;/p>
+				&lt;p>卫生专家提醒公众，预防人感染H7N9禽流感要多洗手、勤锻炼；去涉禽场所要戴口罩；尽量避免接触活禽，购买“杀白”禽类或禽类制品。&lt;/p>
+			&lt;/div>
+			&lt;div id="tab-r2" class="tab-pane">
+				&lt;p>人民网北京1月26日电据浙江省卫生计生委网站消息，浙江省卫生计生委1月25日通报，浙江省当日新增3例人感染H7N9禽流感病例。&lt;/p>
+			&lt;/div>
+			&lt;div id="tab-r3" class="tab-pane">
+				&lt;p>悉，自1月9日确诊1例人感染H7N9禽流感病例以来至今，浙江已连续17天出现新增人感染H7N9禽流感患者&lt;/p>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+													</code>
+												</pre>
+										</div>
+									</div>
+								</div>
+								<h3>折叠展示应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									tab页签，包括顶部页签和右侧页签
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-12">
+										<div data-widget-sortable="false" data-widget-custombutton="false" data-widget-fullscreenbutton="false" data-widget-deletebutton="false" data-widget-togglebutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" id="wid-id-10" class="jarviswidget jarviswidget-color-blueLight" style="" role="widget">
+											<!-- widget options:
+											usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+											data-widget-colorbutton="false"
+											data-widget-editbutton="false"
+											data-widget-togglebutton="false"
+											data-widget-deletebutton="false"
+											data-widget-fullscreenbutton="false"
+											data-widget-custombutton="false"
+											data-widget-collapsed="true"
+											data-widget-sortable="false"
+
+											-->
+											<header role="heading">
+												<span class="widget-icon"> <i class="fa fa-list-alt"></i> </span>
+												<h2>Inside a widget </h2>
+
+											<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+
+											<!-- widget div-->
+											<div role="content">
+
+												<!-- widget edit box -->
+												<div class="jarviswidget-editbox">
+													<!-- This area used as dropdown edit box -->
+
+												</div>
+												<!-- end widget edit box -->
+
+												<!-- widget content -->
+												<div class="widget-body no-padding">
+
+													<div id="accordion-2" class="panel-group smart-accordion-default">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title"><a href="#collapseOne-1" data-parent="#accordion-2" data-toggle="collapse" class="collapsed"> <i class="fa fa-fw fa-plus-circle txt-color-green"></i> <i class="fa fa-fw fa-minus-circle txt-color-red"></i> Collapsible Group Item #1 </a></h4>
+															</div>
+															<div class="panel-collapse collapse" id="collapseOne-1" style="height: 0px;">
+																<div class="panel-body">
+																	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title"><a class="collapsed" href="#collapseTwo-1" data-parent="#accordion-2" data-toggle="collapse"> <i class="fa fa-fw fa-plus-circle txt-color-green"></i> <i class="fa fa-fw fa-minus-circle txt-color-red"></i> Collapsible Group Item #2 </a></h4>
+															</div>
+															<div class="panel-collapse collapse" id="collapseTwo-1" style="height: 0px;">
+																<div class="panel-body">
+																	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title"><a class="" href="#collapseThree-1" data-parent="#accordion-2" data-toggle="collapse"> <i class="fa fa-fw fa-plus-circle txt-color-green"></i> <i class="fa fa-fw fa-minus-circle txt-color-red"></i> Collapsible Group Item #3 </a></h4>
+															</div>
+															<div class="panel-collapse in" id="collapseThree-1" style="height: auto;">
+																<div class="panel-body">
+																	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<!-- end widget content -->
+
+											</div>
+											<!-- end widget div -->
+
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<pre>
+											<h6>代码格式：</h6>
+											<code>
+	&lt;div class="panel-group smart-accordion-default" id="accordion-2">
+		&lt;div class="panel panel-default">
+			&lt;div class="panel-heading">
+				&lt;h4 class="panel-title">&lt;a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-1"> &lt;i class="fa fa-fw fa-plus-circle txt-color-green">&lt;/i> &lt;i class="fa fa-fw fa-minus-circle txt-color-red">&lt;/i> Collapsible Group Item #1 &lt;/a>&lt;/h4>
+			&lt;/div>
+			&lt;div id="collapseOne-1" class="panel-collapse collapse in">
+				&lt;div class="panel-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="panel panel-default">
+			&lt;div class="panel-heading">
+				&lt;h4 class="panel-title">&lt;a data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-1" class="collapsed"> &lt;i class="fa fa-fw fa-plus-circle txt-color-green">&lt;/i> &lt;i class="fa fa-fw fa-minus-circle txt-color-red">&lt;/i> Collapsible Group Item #2 &lt;/a>&lt;/h4>
+			&lt;/div>
+			&lt;div id="collapseTwo-1" class="panel-collapse collapse">
+				&lt;div class="panel-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="panel panel-default">
+			&lt;div class="panel-heading">
+				&lt;h4 class="panel-title">&lt;a data-toggle="collapse" data-parent="#accordion-2" href="#collapseThree-1" class="collapsed"> &lt;i class="fa fa-fw fa-plus-circle txt-color-green">&lt;/i> &lt;i class="fa fa-fw fa-minus-circle txt-color-red">&lt;/i> Collapsible Group Item #3 &lt;/a>&lt;/h4>
+			&lt;/div>
+			&lt;div id="collapseThree-1" class="panel-collapse collapse">
+				&lt;div class="panel-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+							</div>
+							<div id="hr3" class="tab-pane">
+								<h3>标签应用</h3>
+								<div class="row">
+									<div class="col-md-6">
+										<p>
+											label标签，用于着重提醒类。
+											代码格式例如：<br />
+											&lt;span class="label label-success">Success&lt;/span>
+
+										</p>
+
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th width="50%">Classes</th>
+													<th width="50%">Labels</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+													<code>
+														.label-default
+													</code></td>
+													<td><span class="label label-default">Default</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.label-primary
+													</code></td>
+													<td><span class="label label-primary">Primary</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.label-success
+													</code></td>
+													<td><span class="label label-success">Success</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.label-info
+													</code></td>
+													<td><span class="label label-info">Info</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.label-warning
+													</code></td>
+													<td><span class="label label-warning">Warning</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.label-danger
+													</code></td>
+													<td><span class="label label-danger">Danger</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="col-md-6">
+										<p>
+											badges标签应用，用于统计信息类。代码格式例如：<br />
+											&lt;span class="badge bg-color-orange">412&lt;/span>
+										</p>
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th width="50%">Classes</th>
+													<th width="50%">Badges</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>No modifiers</td>
+													<td><span class="badge">42</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.bg-color-darken
+													</code></td>
+													<td><span class="badge bg-color-darken">1</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.bg-color-greenLight
+													</code></td>
+													<td><span class="badge bg-color-greenLight">22</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.bg-color-blueLight
+													</code></td>
+													<td><span class="badge bg-color-blueLight">30</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.bg-color-orange
+													</code></td>
+													<td><span class="badge bg-color-orange">412</span></td>
+												</tr>
+												<tr>
+													<td>
+													<code>
+														.bg-color-red
+													</code></td>
+													<td><span class="badge bg-color-red">999</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+								<div class="well">
+									<h3>Tooltips提示信息</h3>
+									<div class="alert alert-info">
+											<button data-dismiss="alert" class="close">×</button>
+											<i class="fa-fw fa fa-info"></i>
+											此类提示用于帮助提醒或者显示辅助信息。<br />
+											
+										</div>
+									<p>
+										代码格式：<br />
+										&lt;a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="top" data-original-title="信息提示事例，阿门">&lt;i class="fa fa-arrow-up">&lt;/i> Tooltip Top&lt;/a>
+									</p>
+									<br>
+
+									<ul class="demo-btns text-center">
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<h1><b>One</b> <em>Really</em> big tip!</h1>" data-html="true">Big Tip</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<i class='fa fa-check fa-3x text-success'></i> <i class='fa fa-times fa-3x text-danger'></i>" data-html="true">has Icon</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default btn-lg" rel="tooltip" data-placement="top" data-original-title="<img src='img/avatars/sunny.png' alt='me' class='online'>" data-html="true">also Image</a>
+										</li>
+									</ul>
+
+									<ul class="demo-btns text-center">
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="left" data-original-title="Tooltip Left"><i class="fa fa-arrow-left"></i> Tooltip Left</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="top" data-original-title="<h6>信息提示事例，阿门</h6>" data-html="true"><i class="fa fa-arrow-up"></i> Tooltip Top</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="bottom" data-original-title="Tooltip Bottom"><i class="fa fa-arrow-down"></i> Tooltip Bottom</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="btn btn-default" rel="tooltip" data-placement="right" data-original-title="<i class='fa fa-check text-success'></i> Tooltip Right" data-html="true"><i class="fa fa-arrow-right"></i> Tooltip Right</a>
+										</li>
+									</ul>
+
+								</div>
+								
+								<div class="row"><br /></div>
+								<div class="well">
+									<div class="row">
+										<h3>弹出窗口</h3>
+										<div class="col-sm-12">
+											<div class="alert alert-danger fade in">
+												<button data-dismiss="alert" class="close">×</button>
+												<i class="fa-fw fa fa-info"></i>
+												弹出窗口，应用于新建输入或设置等，表单内容不能大于6项；弹出窗不能再嵌套弹出窗。表单验证应在弹出窗内完成，成功提示应用“小型提示窗口”<br />
+												
+											</div>
+											
+											<ul class="demo-btns">
+												<li>
+													<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">弹出演示窗口</button>
+												</li>
+											</ul>
+										</div>
+										
+									</div>
+									<div class="row">
+										<p>
+											<pre>
+												<code>
+	代码格式：<br />
+	&lt;button class="btn btn-primary" data-toggle="modal" data-target="#myModal">弹出演示窗口&lt;/button>
+	<br />
+	弹出窗口内容：<br />
+	&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	……
+	&lt;/div>
+												</code>
+											</pre>
+										</p>
+									</div>
+								</div>
+								<div class="row"><br /></div>
+								<div class="well">
+									<div class="row">
+										<h3>系统级提示框</h3>
+										<div class="alert alert-danger fade in">
+											<button data-dismiss="alert" class="close">×</button>
+											<i class="fa-fw fa fa-info"></i>
+											此类提示框用于在输入验证或需要用户确认的提示，用于场景较严肃的场合。<br />
+											
+										</div>
+										<div class="col-sm-4">
+											<h6>带回调函数和按钮</h6>
+											<ul class="demo-btns">
+												<li>
+													<a href="#" id="smart-mod-eg1" class="btn btn-default"> Callback ()</a>
+												</li>
+												<li>
+													<a href="#" id="smart-mod-eg3" class="btn btn-default"> Many Buttons </a>
+												</li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<h6>带输入框或下拉框</h6>
+											<ul class="demo-btns">
+												<li>
+													<a href="#" id="smart-mod-eg2" class="btn btn-primary"> With Input </a>
+												</li>
+												<li>
+													<a href="#" id="smart-mod-eg4" class="btn btn-primary"> With Select </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="row">
+										<p>
+											<pre>
+												<code>
+	代码格式：<br />
+	&lt;a href="#" id="smart-mod-eg1" class="btn btn-success"> Callback ()&lt;/a>
+	<br />
+	调用方法：<br />
+	$("#smart-mod-eg1").click(function(e) {
+		$.SmartMessageBox({
+			title : "Smart Alert!",
+			content : "This is a confirmation box. Can be programmed for button callback",
+			buttons : '[No][Yes]'
+		}, function(ButtonPressed) {
+			if (ButtonPressed === "Yes") {
+
+				$.smallBox({
+					title : "Callback function",
+					content : "&lt;i class='fa fa-clock-o'>&lt;/i> &lt;i>You pressed Yes...&lt;/i>",
+					color : "#659265",
+					iconSmall : "fa fa-check fa-2x fadeInRight animated",
+					timeout : 4000
+				});
+			}
+			if (ButtonPressed === "No") {
+				$.smallBox({
+					title : "Callback function",
+					content : "&lt;i class='fa fa-clock-o'>&lt;/i> &lt;i>You pressed No...&lt;/i>",
+					color : "#C46A69",
+					iconSmall : "fa fa-times fa-2x fadeInRight animated",
+					timeout : 4000
+				});
+			}
+
+		});
+		e.preventDefault();
+	})
+												</code>
+											</pre>
+										</p>
+									</div>
+								</div>
+								<div class="row"><br /></div>
+								<div class="well">
+									<div class="row">
+										<h3>信息提示框</h3>
+										<div class="alert alert-info">
+											<button data-dismiss="alert" class="close">×</button>
+											<i class="fa-fw fa fa-info"></i>
+											此类提示框用于提交完成，或确认完成后的信息提示。<br />
+											
+										</div>
+										<div class="col-sm-4">
+											<h6>带按钮的提示窗口</h6>
+											<div>
+												<button type="button" id="eg5" class="btn btn-primary">点击查看效果</button>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<h6>带图标的提示窗口</h6>
+											<div>
+												<button type="button" id="eg6" class="btn btn-primary">点击查看效果</button>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<h6>小型提示窗口</h6>
+											<div>
+												<button type="button" id="eg7" class="btn btn-primary"><i class="fa fa-thumbs-up"></i> 点击查看效果</button>
+											</div>
+											
+										</div>
+									</div>
+									<div class="row">
+										<p>
+											<pre>
+												<code>
+	代码格式：<br />
+	&lt;button type="button" id="eg7" class="btn btn-default">&lt;i class="fa fa-thumbs-up">&lt;/i> Extra Small Alert&lt;/button>
+	<br />
+	调用方法：<br />
+	$('#eg7').click(function() {
+		$.smallBox({
+			title : "James Simmons liked your comment",
+			content : "&lt;i class='fa fa-clock-o'>&lt;/i> &lt;i>2 seconds ago...&lt;/i>",
+			color : "#296191",
+			iconSmall : "fa fa-thumbs-up bounce animated",
+			timeout : 4000
+		});
+	})
+												</code>
+											</pre>
+										</p>
+									</div>
+								</div>
+								
+							</div>
+							<div id="hr4" class="tab-pane active">
+								<h3>进度条应用</h3>
+								<div class="alert alert-warning fade in">
+									<i class="fa-fw fa fa-warning"></i>
+									进度条
+								</div>
+								<div class="well">
+									<div class="row">
+										<div class="col-sm-12">
+											<h6>百分比进度条</h6>
+											<div class="bar-holder  no-padding">
+												<div class="progress">
+													<div aria-valuetransitiongoal="75" class="progress-bar bg-color-blue" style="width: 75%;" aria-valuenow="75">75%</div>
+												</div>
+											</div>
+											<h6>细进度条</h6>
+											<div class="progress progress-micro">
+												<div style="width: 44%;" role="progressbar" class="progress-bar progress-bar-primary"></div>
+											</div>
+											<h6>粗进度条</h6>
+											<div class="progress progress-xs">
+												<div style="width: 60%;" role="progressbar" class="progress-bar bg-color-blue"></div>
+											</div>
+											<h6>动态进度条</h6>
+											<div class="progress progress-sm progress-striped active">
+												<div style="width: 45%" role="progressbar" class="progress-bar bg-color-blue"></div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<pre>
+													<h6>代码格式：</h6>
+													<code>
+	<h6>百分比进度条</h6>
+	&lt;div class="bar-holder  no-padding">
+		&lt;div class="progress">
+			&lt;div aria-valuetransitiongoal="75" class="progress-bar bg-color-blue" style="width: 75%;" aria-valuenow="75">75%&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	<h6>细进度条</h6>
+	&lt;div class="progress progress-micro">
+		&lt;div style="width: 44%;" role="progressbar" class="progress-bar progress-bar-primary">&lt;/div>
+	&lt;/div>
+	<h6>粗进度条</h6>
+	&lt;div class="progress progress-xs">
+		&lt;div style="width: 60%;" role="progressbar" class="progress-bar bg-color-blue">&lt;/div>
+	&lt;/div>
+	<h6>动态进度条</h6>
+	&lt;div class="progress progress-sm progress-striped active">
+		&lt;div style="width: 45%" role="progressbar" class="progress-bar bg-color-blue">&lt;/div>
+	&lt;/div>
+													</code>
+												</pre>
+										</div>
+									</div>
+								</div>
+								<div class="well">
+									<div class="row">
+										<div class="col-sm-12">
+											<h6>拖动控制条</h6>
+											<form>
+												<fieldset>
+													<legend>
+														Smart Scale Slider
+													</legend>
+													<div class="row">
+														<div class="col-sm-12">
+
+															<div class="form-group">
+																<input id="range-slider-3" type="text" name="range_2a" value="">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12">
+
+															<div class="form-group">
+																<input id="range-slider-4" type="text" name="range_4" value="">
+															</div>
+														</div>
+													</div>
+												</fieldset>
+												<fieldset>
+													<legend>
+														noScale Slider
+													</legend>
+													<div class="row">
+														<div class="col-sm-12">
+
+															<div class="form-group">
+																<label for="h-input">Default</label>
+																<div id="nouislider-1" class="noUiSlider"></div>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+												<fieldset class="margin-top-10">
+								
+													<legend>
+														JQuery UI Slider
+													</legend>
+													<div class="row">
+														<div class="col-sm-12">
+															<label><code>.slider .slider-danger</code></label>
+															<input type="text" class="slider slider-primary" id="sal" value="" 
+															data-slider-min="10" 
+															data-slider-max="1000" 
+															data-slider-step="1" 
+															data-slider-value="[50,450]"
+															data-slider-handle="squar">
+														</div>
+													</div>	
+													
+													<div class="row">
+														<div class="col-sm-12">
+															<label><code>.slider .slider-primary</code></label>
+															<input type="text" class="slider slider-primary" id="sa5" value="" 
+															data-slider-min="1" 
+															data-slider-max="300"  
+															data-slider-value="150" 
+															data-slider-selection = "before"
+															data-slider-handle="squar">
+														</div>
+													</div>	
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div id="hr5" class="tab-pane">
+								5
+							</div> -->
+						</div>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+	</div>
+</div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">弹出窗口</h4>
+			</div>
+			<div class="modal-body">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Title" required />
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Content" rows="5" required></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="category"> Category</label>
+							<select class="form-control" id="category">
+								<option>Articles</option>
+								<option>Tutorials</option>
+								<option>Freebies</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="tags"> Tags</label>
+							<input type="text" class="form-control" id="tags" placeholder="Tags" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="well well-sm well-primary">
+							<form class="form form-inline " role="form">
+								<div class="form-group">
+									<input type="text" class="form-control" value="" placeholder="Date" required />
+								</div>
+								<div class="form-group">
+									<select class="form-control">
+										<option>Draft</option>
+										<option>Published</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-sm">
+										<span class="glyphicon glyphicon-floppy-disk"></span> 保存
+									</button>
+									<button type="button" class="btn btn-default btn-sm">
+										<span class="glyphicon glyphicon-eye-open"></span> 预览
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					取消
+				</button>
+				<button type="button" class="btn btn-primary">
+					保存
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="row">
+
+	
+
+</div>
+
+<!-- end row -->
+
+<script type="text/javascript">
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+
+	// PAGE RELATED SCRIPTS
+	$("#search-project").focus();
+
+	
+
+	/*
+	 * Smart Notifications
+	 */
+	$('#eg1').click(function(e) {
+
+		$.bigBox({
+			title : "Big Information box",
+			content : "This message will dissapear in 6 seconds!",
+			color : "#C46A69",
+			//timeout: 6000,
+			icon : "fa fa-warning shake animated",
+			number : "1",
+			timeout : 6000
+		});
+
+		e.preventDefault();
+
+	})
+
+	$('#eg2').click(function(e) {
+
+		$.bigBox({
+			title : "Big Information box",
+			content : "Lorem ipsum dolor sit amet, test consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			color : "#3276B1",
+			//timeout: 8000,
+			icon : "fa fa-bell swing animated",
+			number : "2"
+		});
+
+		e.preventDefault();
+	})
+
+	$('#eg3').click(function(e) {
+
+		$.bigBox({
+			title : "Shield is up and running!",
+			content : "Lorem ipsum dolor sit amet, test consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			color : "#C79121",
+			//timeout: 8000,
+			icon : "fa fa-shield fadeInLeft animated",
+			number : "3"
+		});
+
+		e.preventDefault();
+
+	})
+
+	$('#eg4').click(function(e) {
+
+		$.bigBox({
+			title : "Success Message Example",
+			content : "Lorem ipsum dolor sit amet, test consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			color : "#739E73",
+			//timeout: 8000,
+			icon : "fa fa-check",
+			number : "4"
+		}, function() {
+			closedthis();
+		});
+
+		e.preventDefault();
+
+	})
+
+	$('#eg5').click(function() {
+
+		$.smallBox({
+			title : "Ding Dong!",
+			content : "Someone's at the door...shall one get it sir? <p class='text-align-right'><a href='javascript:void(0);' class='btn btn-primary btn-sm'>Yes</a> <a href='javascript:void(0);'  onclick='noAnswer();' class='btn btn-danger btn-sm'>No</a></p>",
+			color : "#296191",
+			//timeout: 8000,
+			icon : "fa fa-bell swing animated"
+		});
+
+	})
+	function noAnswer() {
+
+		$.smallBox({
+			title : "Sure, as you wish sir...",
+			content : "",
+			color : "#A65858",
+			iconSmall : "fa fa-times",
+			timeout : 5000
+		});
+
+	}
+
+
+	$('#eg6').click(function() {
+
+		$.smallBox({
+			title : "Big Information box",
+			content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+			color : "#5384AF",
+			//timeout: 8000,
+			icon : "fa fa-bell"
+		});
+
+	})
+
+	$('#eg7').click(function() {
+
+		$.smallBox({
+			title : "James Simmons liked your comment",
+			content : "<i class='fa fa-clock-o'></i> <i>2 seconds ago...</i>",
+			color : "#296191",
+			iconSmall : "fa fa-thumbs-up bounce animated",
+			timeout : 4000
+		});
+
+	})
+	function closedthis() {
+		$.smallBox({
+			title : "Great! You just closed that last alert!",
+			content : "This message will be gone in 5 seconds!",
+			color : "#739E73",
+			iconSmall : "fa fa-cloud",
+			timeout : 5000
+		});
+	}
+
+	/*
+	* SmartAlerts
+	*/
+	// With Callback
+	$("#smart-mod-eg1").click(function(e) {
+		$.SmartMessageBox({
+			title : "删除车辆!",
+			content : "删除车辆，将导致所有相关数据永久删除，是否确认？",
+			buttons : '[取消][确认]'
+		}, function(ButtonPressed) {
+			if (ButtonPressed === "确认") {
+
+				$.smallBox({
+					title : "Callback function",
+					content : "<i class='fa fa-clock-o'></i> <i>You pressed Yes...</i>",
+					color : "#659265",
+					iconSmall : "fa fa-check fa-2x fadeInRight animated",
+					timeout : 4000
+				});
+			}
+			if (ButtonPressed === "取消") {
+				$.smallBox({
+					title : "Callback function",
+					content : "<i class='fa fa-clock-o'></i> <i>You pressed No...</i>",
+					color : "#C46A69",
+					iconSmall : "fa fa-times fa-2x fadeInRight animated",
+					timeout : 4000
+				});
+			}
+
+		});
+		e.preventDefault();
+	})
+	// With Input
+	$("#smart-mod-eg2").click(function(e) {
+
+		$.SmartMessageBox({
+			title : "Smart Alert: Input",
+			content : "Please enter your user name",
+			buttons : "[Accept]",
+			input : "text",
+			placeholder : "Enter your user name"
+		}, function(ButtonPress, Value) {
+			alert(ButtonPress + " " + Value);
+		});
+
+		e.preventDefault();
+	})
+	// With Buttons
+	$("#smart-mod-eg3").click(function(e) {
+
+		$.SmartMessageBox({
+			title : "Smart Notification: Buttons",
+			content : "Lots of buttons to go...",
+			buttons : '[Need?][You][Do][Buttons][Many][How]'
+		});
+
+		e.preventDefault();
+	})
+	// With Select
+	$("#smart-mod-eg4").click(function(e) {
+
+		$.SmartMessageBox({
+			title : "Smart Alert: Select",
+			content : "You can even create a group of options.",
+			buttons : "[Done]",
+			input : "select",
+			options : "[Costa Rica][United States][Autralia][Spain]"
+		}, function(ButtonPress, Value) {
+			alert(ButtonPress + " " + Value);
+		});
+
+		e.preventDefault();
+	});
+
+	// With Login
+	$("#smart-mod-eg5").click(function(e) {
+
+		$.SmartMessageBox({
+			title : "Login form",
+			content : "Please enter your user name",
+			buttons : "[Cancel][Accept]",
+			input : "text",
+			placeholder : "Enter your user name"
+		}, function(ButtonPress, Value) {
+			if (ButtonPress == "Cancel") {
+				alert("Why did you cancel that? :(");
+				return 0;
+			}
+
+			Value1 = Value.toUpperCase();
+			ValueOriginal = Value;
+			$.SmartMessageBox({
+				title : "Hey! <strong>" + Value1 + ",</strong>",
+				content : "And now please provide your password:",
+				buttons : "[Login]",
+				input : "password",
+				placeholder : "Password"
+			}, function(ButtonPress, Value) {
+				alert("Username: " + ValueOriginal + " and your password is: " + Value);
+			});
+		});
+
+		e.preventDefault();
+	});
+
+	/*
+	 * JS SLIDER
+	 */
+
+	loadScript("js/plugin/noUiSlider/jquery.nouislider.min.js", noUiSlider);
+
+	function noUiSlider() {
+
+	    //* noUi Sliders
+	    $("#nouislider-1").noUiSlider({
+	        range: [2, 100],
+	        start: 55,
+	        handles: 1,
+	        connect: true,
+	    });
+
+	    $("#nouislider-2").noUiSlider({
+	        range: [0, 300],
+	        start: [55, 130],
+	        step: 60,
+	        handles: 2,
+	        connect: true
+	    });
+
+	    $("#nouislider-3").noUiSlider({
+	        range: [0, 1000],
+	        start: [264, 776],
+	        step: 1,
+	        connect: true,
+	        slide: function () {
+	            var values = $(this).val();
+	            $(".nouislider-value").text(values[0] + " - " + values[1]);
+	        }
+	    });
+
+	    $("#nouislider-4").noUiSlider({
+	        range: [0, 100],
+	        start: 50,
+	        handles: 1
+	    }).attr("disabled", "disabled");
+
+	} // end noUISlider
+
+	/*
+	 * ION SLIDER
+	 */
+	loadScript("js/plugin/date/moment.js");
+	loadScript("js/plugin/date/daterangepicker.js");
+
+	loadScript("js/plugin/ion-slider/ion.rangeSlider.min.js", ion_slider);
+
+	function ion_slider() {
+
+	    //* ion Range Sliders
+
+	    $("#range-slider-1").ionRangeSlider({
+	        min: 0,
+	        max: 5000,
+	        from: 1000,
+	        to: 4000,
+	        type: 'double',
+	        step: 1,
+	        prefix: "$",
+	        prettify: false,
+	        hasGrid: true
+	    });
+
+	    $("#range-slider-2").ionRangeSlider();
+
+	    $("#range-slider-3").ionRangeSlider({
+	        min: 0,
+	        from: 2.3,
+	        max: 10,
+	        type: 'single',
+	        step: 0.1,
+	        postfix: " mm",
+	        prettify: false,
+	        hasGrid: true
+	    });
+
+	    $("#range-slider-4").ionRangeSlider({
+	        min: -50,
+	        max: 50,
+	        from: 5,
+	        to: 25,
+	        type: 'double',
+	        step: 1,
+	        postfix: "°",
+	        prettify: false,
+	        hasGrid: true
+	    });
+
+	    $("#range-slider-5").ionRangeSlider({
+	        min: 0,
+	        from: 0,
+	        max: 10,
+	        type: 'single',
+	        step: 0.1,
+	        postfix: " mm",
+	        prettify: false,
+	        hasGrid: true
+	    });
+
+	}
+
+</script>
+
+

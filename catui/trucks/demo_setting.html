@@ -1,0 +1,176 @@
+<div class="row">
+    <div class="col-sm-12">
+    	<!-- Widget ID (each widget will need unique ID)-->
+    	<div class="jarviswidget well" id="wid-id-0">
+            <!-- widget options:
+            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+    
+            data-widget-colorbutton="false"
+            data-widget-editbutton="false"
+            data-widget-togglebutton="false"
+            data-widget-deletebutton="false"
+            data-widget-fullscreenbutton="false"
+            data-widget-custombutton="false"
+            data-widget-collapsed="true"
+            data-widget-sortable="false"
+    
+            -->
+            <header>
+                <span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+                <h2>字段设置</h2>
+            </header>
+            <!--内容区-->
+            <div class="row">
+                <div class="col-sm-5">
+                	<h6>全部字段</h6>
+					<div class="dd" id="data_all">
+                    	<ol class="dd-list">
+                       		<li class="dd-item" data-id="5"><div class="dd-handle">车长</div></li>
+                       		<li class="dd-item" data-id="6"><div class="dd-handle">箱型</div></li>
+                       		<li class="dd-item" data-id="7"><div class="dd-handle">状态</div></li>
+                       		<li class="dd-item" data-id="8"><div class="dd-handle">备注</div></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                	<h6>使用字段</h6>
+                    <div class="dd" id="data_select">
+                    	<ol class="dd-list">
+                       		<li class="dd-item" data-id="1"><div class="dd-handle">车号</div></li>
+                       		<li class="dd-item" data-id="2"><div class="dd-handle">驾驶员</div></li>
+                       		<li class="dd-item" data-id="3"><div class="dd-handle">所属机构</div></li>
+                       		<li class="dd-item" data-id="4"><div class="dd-handle">位置</div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-sm-10">
+                	<h6>全部字段</h6>
+                    <select name="searchable[]" id='searchable' multiple='multiple' style="height:300px">
+					<option value='1'>Option strawberry 1 - India</option>
+					<option value='2'>Option apricot 2 - Italy</option>
+					<option value='3' selected="selected" disabled="disabled">Option cherry 3 - USA</option>
+					<option value='4'>Option pineapple 4 - Holland</option>
+					<option value='5'>Option pineapple 5 - Mexico</option>
+					<option value='6'>Option pineapple 6 - Holland</option>
+					<option value='7'>Option pineapple 7 - USA</option>
+					<option value='8'>Option apricot 8 - India</option>
+					<option value='9'>Option pear 9 - Japan</option>
+					<option value='10' selected="selected">Option melon 10 - Canada</option>
+					<option value='11'>Option melon 11 - Canada</option>
+					<option value='12'>Option melon 12 - China</option>
+					<option value='13'>Option apple 13 - Japan</option>
+					<option value='14'>Option orange 14 - Italy</option>
+					<option value='15' selected="selected">Option cherry 15 - Canada</option>
+					<option value='16'>Option pear 16 - Germany</option>
+					<option value='17'>Option orange 17 - Italy</option>
+					<option value='18'>Option apricot 18 - Italy</option>
+					<option value='19'>Option orange 19 - Mexico</option>
+					<option value='20'>Option pineapple 20 - Germany</option>
+					<option value='21'>Option apricot 21 - USA</option>
+					<option value='22'>Option pear 22 - Mexico</option>
+					<option value='23'>Option pear 23 - India</option>
+					<option value='24'>Option pear 24 - Holland</option>
+					<option value='25'>Option apricot 25 - China</option>
+					<option value='26'>Option cherry 26 - Italy</option>
+					<option value='27'>Option apple 27 - USA</option>
+					<option value='28'>Option strawberry 28 - Italy</option>
+					<option value='29'>Option cherry 29 - Italy</option>
+					<option value='30'>Option orange 30 - Holland</option>
+					<option value='31'>Option pear 31 - France</option>
+					<option value='32'>Option pear 32 - Holland</option>
+					<option value='33'>Option melon 33 - Italy</option>
+					<option value='34'>Option pineapple 34 - Japan</option>
+					<option value='35'>Option pear 35 - Italy</option>
+					<option value='36'>Option melon 36 - USA</option>
+					<option value='37'>Option orange 37 - Japan</option>
+					<option value='38'>Option melon 38 - France</option>
+					<option value='39'>Option pineapple 39 - Germany</option>
+					<option value='40'>Option strawberry 40 - Canada</option>
+					<option value='41'>Option pineapple 41 - Germany</option>
+					<option value='42'>Option pear 42 - Japan</option>
+					<option value='43'>Option strawberry 43 - Canada</option>
+					<option value='44'>Option apricot 44 - Germany</option>
+					<option value='45'>Option pear 45 - China</option>
+					<option value='46'>Option pear 46 - Japan</option>
+					<option value='47'>Option pear 47 - Holland</option>
+					<option value='48'>Option orange 48 - Germany</option>
+					<option value='49'>Option pineapple 49 - Germany</option>
+					<option value='50'>Option pear 50 - India</option>
+					<option value='51'>Option cherry 51 - Germany</option>
+					<option value='52'>Option apple 52 - India</option>
+					<option value='53'>Option melon 53 - France</option>
+					<option value='54'>Option melon 54 - Italy</option>
+					<option value='55'>Option orange 55 - France</option>
+					<option value='56'>Option pear 56 - China</option>
+					<option value='57'>Option orange 57 - Holland</option>
+					<option value='58'>Option melon 58 - USA</option>
+					<option value='59'>Option cherry 59 - USA</option>
+					<option value='60'>Option strawberry 60 - Italy</option>
+				</select>
+				</div>
+            </div>
+            <div class="row">
+				<a href="#" id="username">填充表格</a>
+            </div>
+		</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+
+	// PAGE RELATED SCRIPTS
+	loadScript("js/plugin/jquery-nestable/jquery.nestable.js", runNestables);
+	loadScript("js/plugin/multiselect2side/jquery.multiselect2side.js", runmultiselect2side);
+	
+	function runNestables() {
+		$('#data_all').nestable({ 
+			maxDepth : 1,
+			});
+		$('#data_select').nestable({
+			maxDepth : 1,			
+			});
+		$('#data_select').on('change', function() {
+    		/* on change event */
+			var list = $('.dd').nestable('serialize');
+			console.log(list);
+			});
+	}
+	function runmultiselect2side() {
+		$('#searchable').multiselect2side({
+			'search': '搜索: ',
+			'moveOptions': true,
+			'selectedPosition': 'right',
+			'labelSort': '<i class = "fa fa-sort-alpha-asc"></i>',
+			'labelTop': '<i class = "fa fa-caret-square-o-up"></i>',
+			'labelBottom': '<i class = "fa fa-caret-square-o-down"></i>',
+			'labelUp': '<i class = "fa fa-chevron-up"></i>',
+			'labelDown': '<i class = "fa fa-chevron-down"></i>',
+			'labelsx': '* Selected *',
+			'labeldx': '使用字段：',
+			});
+		};
+
+	loadScript("js/plugin/x-editable/moment.min.js");
+	loadScript("js/plugin/x-editable/jquery.mockjax.min.js");
+    loadScript("js/plugin/x-editable/x-editable.min.js");
+	
+		$(document).ready(function() {
+			//toggle `popup` / `inline` mode
+			$.fn.editable.defaults.mode = 'popup';     
+			
+			//make username editable
+			$('#username').editable({
+				type: 'text',
+				pk: 1,
+				//url: '/post',
+				title: 'Enter username'									
+				});
+			
+			//make status editable
+		});
+		
+</script>

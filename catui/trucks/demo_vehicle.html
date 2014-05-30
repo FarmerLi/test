@@ -1,0 +1,1238 @@
+<div data-widget-custombutton="false" data-widget-fullscreenbutton="false" data-widget-deletebutton="false" data-widget-togglebutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" id="wid-id-11" class="jarviswidget jarviswidget-sortable" style="" role="widget">
+	<!-- widget options:
+		usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+		
+		data-widget-colorbutton="false"	
+		data-widget-editbutton="false"
+		data-widget-togglebutton="false"
+		data-widget-deletebutton="false"
+		data-widget-fullscreenbutton="false"
+		data-widget-custombutton="false"
+		data-widget-collapsed="true" 
+		data-widget-sortable="false"
+		
+	-->
+	<header role="heading">	
+		<ul class="nav nav-tabs pull-left" id="widget-tab-1">
+			<li class="active">
+				<a href="#hr1" data-toggle="tab"><span class="hidden-mobile hidden-tablet">车辆管理</span> </a>
+			</li>
+			<li class="">
+				<a href="#hr2" data-toggle="tab"><span class="hidden-mobile hidden-tablet">外协车管理</span></a>
+			</li>
+			<li class="">
+				<a href="#hr3" data-toggle="tab"><span class="hidden-mobile hidden-tablet">外协车交易历史</span></a>
+			</li>
+		</ul>	
+		<div class="jarviswidget-ctrls" role="menu">
+		    <a data-placement="bottom" title="" rel="tooltip" class="button-icon jarviswidget-fullscreen-btn" href="javascript:void(0);" data-original-title="Fullscreen">
+		    	<i class="fa fa-resize-full "></i>
+		    </a>
+		</div>
+		<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+	</header>
+	<!-- widget div-->
+	<div role="content">
+		<!-- widget edit box -->
+		<div class="jarviswidget-editbox">
+			<!-- This area used as dropdown edit box -->			
+		</div>
+		<!-- end widget edit box -->		
+		<!-- widget content -->
+		<div class="widget-body no-padding">
+			<!-- widget body text-->			
+			<div class="tab-content">
+				<div id="hr1" class="tab-pane fade active in">
+					<div class="widget-body">
+						<!-- 自定义搜索区 -->
+						<div style="height:70px;overflow:hidden;" class="widget-body-toolbar-bgfff">
+							<form class="smart-form" role="form">
+								<div style="margin-right:150px">
+									<div class="row">
+										<section class="col col-sm-3">
+											<label class="">车牌号</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-3">
+											<label class="">所属机构</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-3">
+											<label class="lael">车辆使用类型</label>
+											<label class="select">
+												<select class="input-sm">
+													<option value="0">全部车辆</option>
+													<option value="1">自有车辆</option>
+													<option value="2">排行车辆</option>
+													<option value="3">外部共享</option>
+												</select> <i></i> 
+											</label>
+										</section>										
+										<section class="col col-sm-3">
+											<label class="">车辆用途</label>
+											<label class="select">
+												<select class="input-sm">
+													<option value="0">干线</option>
+													<option value="1">揽投</option>
+												</select> <i></i> 
+											</label>
+										</section>										
+									</div>
+								</div>
+								<div style="width: 120px; position: absolute; top: 0px; right: 0px;" class="">
+										<a style="margin-top:16px;" type="button" class="btn btn-primary  btn-sm">搜索</a>
+										<a style="margin-top:16px;" type="button" class="btn btn-sm btn-link" id="more_search" state="close">高级搜索</a>
+									</div>
+							</form>
+						</div>						
+						<div class="row padding-10">
+							<div class="col-xs-8 col-sm-8">
+								<div class="btn-group">
+									<a class="btn btn-default" href="#ajax/demo_drivers_new.html">新增车辆</a>
+									<a class="btn btn-default" href="#">导入车辆</a>
+								</div>
+								<div class="btn-group">
+									<a class="btn btn-default" href="#">批量修改</a>
+									<a class="btn btn-default" href="#">内部共享</a>
+									<a class="btn btn-default" href="#">导出</a>
+									<a class="btn btn-default" href="#">删除</a>
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<a type="button" class="btn btn-default pull-right" href="#">
+									<i class="fa-bar-chart-o fa txt-color-blue"></i>相关报表
+								</a>
+								<a type="button" class="btn btn-default pull-right" href="#">车辆监控</a>
+							</div>
+						</div>
+						<div role="grid" class="dataTables_wrapper form-inline" id="dt_basic_wrapper">
+							<div class="dt-top-row"></div>
+							<div class="dt-wrapper">
+								<table class="table table-striped table-bordered table-hover  smart-form has-tickbox dataTable" id="dt_basic" aria-describedby="dt_basic_info">
+									<thead>
+										<tr role="row">
+											<th class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1">
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox-inline">
+													<i></i>
+												</label>
+											</th>
+											<th class="" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1">操作</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" >状态</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1">车牌号</th>
+											<th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-sort="descending" aria-label="所属机构: activate to sort column ascending">所属机构</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车长: activate to sort column ascending">车长</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="箱型: activate to sort column ascending">箱型</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车辆使用类型: activate to sort column ascending">车辆使用类型</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车辆用途: activate to sort column ascending">车辆用途</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车辆可用状态: activate to sort column ascending">车辆可用状态</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="额定载重: activate to sort column ascending">额定载重</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="额定体积: activate to sort column ascending">额定体积</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车辆可用状态: activate to sort column ascending">车辆可用状态</th>
+										</tr>
+									</thead>							
+								<tbody role="alert" aria-live="polite" aria-relevant="all">
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+										</td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">
+											京H65432
+											<i class="fa fa-check-circle txt-color-green"></i>
+										</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">
+											京H65432
+											<i class="fa  fa-exclamation-circle txt-color-red"></i>
+										</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">
+											京H65432
+											<i class="fa fa-exclamation-triangle txt-color-yellow"></i>
+										</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">&nbsp;</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">华宇物流</td>
+										<td class=" ">13.6</td>
+										<td class=" ">高栏</td>
+										<td class=" ">自有车辆</td>
+										<td class=" ">干线</td>
+										<td class=" ">运营</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+										<td class=" ">运营</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="dt-row dt-bottom-row">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dataTables_info" id="dt_basic_info">从 1 到 10 /共 100 条数据</div>
+								</div>
+								<div class="col-sm-8 text-right">
+									<div class="dataTables_paginate paging_bootstrap_full">
+										<ul class="pagination">
+											<li class="first disabled"><a href="#">首页</a></li>
+											<li class="prev disabled"><a href="#">前一页</a></li>
+											<li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="next"><a href="#">后一页</a></li>
+											<li class="last"><a href="#">尾页</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div id="hr2" class="tab-pane fade">
+					<div class="widget-body">
+						<!-- 自定义搜索区 -->
+						<div style="height:70px;overflow:hidden;" class="widget-body-toolbar-bgfff">
+							<form class="smart-form" role="form">
+								<div style="margin-right:150px">
+									<div class="row">
+										<section class="col col-sm-2">
+											<label class="">车牌号</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-2">
+											<label class="">车长</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-2">
+											<label class="lael">箱型</label>
+											<label class="select">
+												<select class="input-sm">
+													<option value="0">全部</option>
+													<option value="1">高栏</option>
+													<option value="2">低栏</option>
+													<option value="3">平板</option>
+													<option value="4">箱式</option>
+													<option value="4">冷藏</option>
+													<option value="4">冷冻</option>
+													<option value="4">牵引</option>
+												</select> <i></i> 
+											</label>
+										</section>										
+										<section class="col col-sm-3">
+											<label class="">当前位置</label>
+											<label class="select">
+												<select class="input-sm">
+													<option value="0">北京</option>
+													<option value="1">上海</option>
+												</select> <i></i> 
+											</label>
+										</section>
+										<section class="col col-sm-3">
+											<label class="">手机号</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+									</div>
+								</div>
+								<div style="width: 120px; position: absolute; top: 0px; right: 0px;" class="">
+										<a style="margin-top:16px;" type="button" class="btn btn-primary  btn-sm">搜索</a>
+										<a style="margin-top:16px;" type="button" class="btn btn-sm btn-link" id="more_search" state="close">高级搜索</a>
+									</div>
+							</form>
+						</div>						
+						<div class="row padding-10">
+							<div class="col-xs-8 col-sm-8">
+								<div class="btn-group">
+									<a class="btn btn-default" href="#ajax/demo_drivers_new.html">新增车辆</a>
+									<a class="btn btn-default" href="#">导入车辆</a>
+								</div>
+								<div class="btn-group">
+									<a class="btn btn-default" href="#">合作授权</a>
+									<a class="btn btn-default" href="#">发起合作</a>
+									<a class="btn btn-default" href="#">发消息</a>
+									<a class="btn btn-default" href="#">导出</a>
+									<a class="btn btn-default" href="#">删除</a>
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<a type="button" class="btn btn-default pull-right" href="#">外协交易历史</a>
+								<a type="button" class="btn btn-default pull-right" href="#">车辆监控</a>
+							</div>
+						</div>
+						<div role="grid" class="dataTables_wrapper form-inline" id="dt_basic_wrapper">
+							<div class="dt-top-row"></div>
+							<div class="dt-wrapper">
+								<table class="table table-striped table-bordered table-hover  smart-form has-tickbox dataTable" id="dt_basic" aria-describedby="dt_basic_info">
+									<thead>
+										<tr role="row">
+											<th class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 23px;" aria-label=": activate to sort column descending">
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox-inline">
+													<i></i>
+												</label>
+											</th>
+											<th class="" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 23px;" aria-label=": activate to sort column descending"></th>
+											<th class="" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 29px;" aria-label="操作: activate to sort column ascending">操作</th>
+											<th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车牌号: activate to sort column ascending">车牌号</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车长: activate to sort column ascending">车长</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="箱型: activate to sort column ascending">箱型</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 79px;" aria-label="当前位置: activate to sort column ascending">当前位置</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="定位时间: activate to sort column ascending">定位时间</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="司机姓名: activate to sort column ascending">司机姓名</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="手机号: activate to sort column ascending">手机号</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="授权时间: activate to sort column ascending">授权时间</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="授权期间: activate to sort column ascending">授权期间</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="额定载重: activate to sort column ascending">额定载重</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="额定体积: activate to sort column ascending">额定体积</th>
+										</tr>
+									</thead>							
+								<tbody role="alert" aria-live="polite" aria-relevant="all">
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="odd">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+									<tr class="even">
+										<td class=" "><label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i></label></td>
+										<td></td>
+										<td class="">
+											<div class="btn-group">
+	                                            <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+	                                             	<i class="fa fa-pencil"></i>
+	                                                <i class="fa fa-caret-down"></i>
+	                                            </button>
+	                                            <ul class="dropdown-menu">
+	                                                <li>
+	                                                    <a href="javascript:void(0);">编辑</a>
+	                                                </li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">备注</a>
+	                                                </li>
+	                                                <li class="divider"></li>
+	                                                <li>
+	                                                    <a href="javascript:void(0);">删除</a>
+	                                                </li>
+	                                            </ul>
+                                        	</div>
+                                        </td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">载货</td>
+										<td class=" ">北京</td>
+										<td class=" ">1分钟前</td>
+										<td class=" ">张三</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">2014-01-25</td>
+										<td class=" ">永久</td>
+										<td class=" ">50</td>
+										<td class=" ">40</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="dt-row dt-bottom-row">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dataTables_info" id="dt_basic_info">从 1 到 10 /共 100 条数据</div>
+								</div>
+								<div class="col-sm-8 text-right">
+									<div class="dataTables_paginate paging_bootstrap_full">
+										<ul class="pagination">
+											<li class="first disabled"><a href="#">首页</a></li>
+											<li class="prev disabled"><a href="#">前一页</a></li>
+											<li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="next"><a href="#">后一页</a></li>
+											<li class="last"><a href="#">尾页</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div id="hr3" class="tab-pane fade">
+					<div class="widget-body">
+						<!-- 自定义搜索区 -->
+						<div style="height:70px;overflow:hidden;" class="widget-body-toolbar-bgfff">
+							<form class="smart-form" role="form">
+								<div style="margin-right:150px">
+									<div class="row">
+										<section class="col col-sm-4">
+											<label class="">合作开始时间</label>
+											<label class="input">
+                                            	<i class="icon-prepend fa fa-calendar"></i>
+												<input type="text" value="2014-02-02 - 2014-02-15" id="reservation" maxlength="10">
+											</label>
+										</section>
+										<section class="col col-sm-3">
+											<label class="">车牌号</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-3">
+											<label class="">车长</label>
+											<label class="input">
+												<input type="text" class="input-sm" placeholder="" name="tid">
+											</label>
+										</section>
+										<section class="col col-sm-2">
+											<label class="lael">箱型</label>
+											<label class="select">
+												<select class="input-sm">
+													<option value="0">全部</option>
+													<option value="1">高栏</option>
+													<option value="2">低栏</option>
+													<option value="3">平板</option>
+													<option value="4">箱式</option>
+													<option value="4">冷藏</option>
+													<option value="4">冷冻</option>
+													<option value="4">牵引</option>
+												</select> <i></i> 
+											</label>
+										</section>										
+									</div>
+								</div>
+								<div style="width: 120px; position: absolute; top: 0px; right: 0px;" class="">
+										<a style="margin-top:16px;" type="button" class="btn btn-primary  btn-sm">搜索</a>
+										<a style="margin-top:16px;" type="button" class="btn btn-sm btn-link" id="more_search" state="close">高级搜索</a>
+									</div>
+							</form>
+						</div>						
+						<div class="row padding-10">
+							<div class="col-xs-12">
+								<div class="btn-group">
+									<a class="btn btn-default" href="#">导出</a>
+								</div>
+							</div>
+						</div>
+						<div role="grid" class="dataTables_wrapper form-inline" id="dt_basic_wrapper">
+							<div class="dt-top-row"></div>
+							<div class="dt-wrapper">
+								<table class="table table-striped table-bordered table-hover  smart-form has-tickbox dataTable" id="dt_basic" aria-describedby="dt_basic_info">
+									<thead>
+										<tr role="row">
+											<th class="" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 23px;" aria-label="序号: activate to sort column descending">序号</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 169px;" aria-label="车牌号: activate to sort column ascending">车牌号</th>
+											<th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="车长: activate to sort column ascending">车长</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="箱型: activate to sort column ascending">箱型</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="手机号: activate to sort column ascending">手机号</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="用车机构: activate to sort column ascending">用车机构</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="任务: activate to sort column ascending">任务</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="开始时间: activate to sort column ascending">开始时间</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="结束时间: activate to sort column ascending">结束时间</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="任务状态: activate to sort column ascending">任务状态</th>
+											<th class="sorting" role="columnheader" tabindex="0" aria-controls="dt_basic" rowspan="1" colspan="1" style="width: 99px;" aria-label="确认完成时间: activate to sort column ascending">确认完成时间</th>
+										</tr>
+									</thead>							
+								<tbody role="alert" aria-live="polite" aria-relevant="all">
+									<tr class="odd">
+										<td>1</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="even">
+										<td>2</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="odd">
+										<td>3</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="even">
+										<td>4</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="odd">
+										<td>5</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="even">
+										<td>6</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="odd">
+										<td>7</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="even">
+										<td>8</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="odd">
+										<td>9</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+									<tr class="even">
+										<td>10</td>
+										<td class=" ">京H65432</td>
+										<td class="  sorting_1">12</td>
+										<td class=" ">高栏</td>
+										<td class=" ">13800000000</td>
+										<td class=" ">北京佳吉</td>
+										<td class=" ">北京——上海</td>
+										<td class=" ">2013-11-05</td>
+										<td class=" ">2013-11-06</td>
+										<td class=" ">进行中</td>
+										<td class=" ">2013-11-12</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="dt-row dt-bottom-row">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dataTables_info" id="dt_basic_info">从 1 到 10 /共 100 条数据</div>
+								</div>
+								<div class="col-sm-8 text-right">
+									<div class="dataTables_paginate paging_bootstrap_full">
+										<ul class="pagination">
+											<li class="first disabled"><a href="#">首页</a></li>
+											<li class="prev disabled"><a href="#">前一页</a></li>
+											<li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="next"><a href="#">后一页</a></li>
+											<li class="last"><a href="#">尾页</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>			
+			<!-- end widget body text-->			
+		</div>
+		<!-- end widget content -->		
+	</div>
+	<!-- end widget div -->	
+</div>

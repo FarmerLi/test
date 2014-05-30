@@ -1,0 +1,9 @@
+.smart-form.widget-body-toolbar, .widget-body-toolbar-bgfff {
+    background:#fff;
+    border-bottom: 1px solid #CCCCCC;
+    display: block;
+    min-height: 42px;
+    padding: 8px 10px;
+    height:70px;
+    overflow:hidden;
+}

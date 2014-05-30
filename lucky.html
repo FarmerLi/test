@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>抽奖</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style type="text/css">
+    .main{
+        background: url(background.jpg);
+        width: 1000px;
+        height: 1000px;
+        margin: 0 auto;
+    }
+    #log{position: relative; top: 550px; text-align: center;}
+    #log span{margin: 10px; }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    <div class="main">
+        <div style=" position: relative; top: 480px; left: 420px; text-align: center; width: 160px;">
+            <div style="border: 3px solid #97a300; background: #e9fb00; width: 150px; height: 150px; line-height: 150px; font-size: 80px; font-weight: bold;" id="result"></div>
+            <input type="button" value="next" id="next" style="border: 1px solid red; background: #ff7140; color: a65c00; height: 30px; width: 50px; margin-top: 10px; font-size: 16px;" />
+        </div>
+        <div id="log">
+            <div>记录：</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var users = [];
+        for (var i = 1; i <= 14; i ++) {
+            users.push(i);
+        }
+        $('#next').bind('click', function () {
+            if (users.length <= 0) {
+                return false;
+            }
+            var num = random(0, users.length);
+            var result = users[num];
+            $('#result').html(result);
+            users.splice(num, 1);
+            $('#log').append($('<span></span>').text(result));
+        });
+        function random(min,max){
+            return parseInt(Math.random() * max);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+
+<div class="row">
+	<div class="col col-sm-8 col-xs-12">
+		<div class="btn-group">
+			<a type="button" class="btn btn-default" href="#"> < 返回</a>
+		</div>
+		<div class="btn-group">
+			<a type="button" class="btn btn-default" href="#">编辑</a>
+			<a type="button" class="btn btn-default" href="#">删除</a>
+		</div>
+	</div>
+	<div class="col col-sm-4 col-xs-12 text-right">
+		
+			<a type="button" href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="bottom" data-original-title="共享给" data-content="<div><i class='fa fa-angle-right'></i> 南京分公司</div><div><i class='fa fa-angle-right'></i> 上海分公司</div><div><i class='fa fa-angle-right'></i> 广州分公司</div>" data-html="true"><i class="fa fa-cloud-upload txt-color-blue"></i> 查看共享</a>
+		
+			<a type="button" href="javascript:void(0);" class="btn btn-default" rel="popover" data-placement="bottom" data-original-title="来源" data-content="<i class='fa fa-angle-right'></i> 北京佳吉分公司（外部机构）" data-html="true"><i class="fa fa-cloud-download txt-color-green"></i>
+			共享来源</a>
+		</p>
+	</div>
+</div>
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-0" data-widget-sortable="true" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+				<header>
+					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+					<h2>车辆详情</h2>
+				</header>
+				
+				<!-- widget div-->
+				<div role="content">
+					<div class="widget-body smart-form">
+					<!-- widget content -->
+					<div>
+						<header>基本信息</header>
+						<div class="padding-top-10 clearfix">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-xs-4 text-align-right txt-color-blueDark">车牌号：
+									</label>
+									<section class="col col-xs-8">
+										京H12345
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">所属机构：
+									</label>
+									<section class="col col-8">
+										北京佳吉
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">使用部门：
+									</label>
+									<section class="col col-8">
+										运营部
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">车辆使用类型：
+									</label>
+									<section class="col col-8">
+										自有车辆
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+								
+									<label class="col col-4 text-align-right txt-color-blueDark">车辆用途：
+									</label>
+									<section class="col col-8">
+										干线
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">车型：
+									</label>
+									<section class="col col-8">
+										沃尔沃FM440
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										额定体积：
+									</label>
+									<section class="col col-8">
+										60平方米
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										额定载重：
+									</label>
+									<section class="col col-8">
+										50吨
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										车厢长：
+									</label>
+									<section class="col col-8">
+										17米
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										车厢宽：
+									</label>
+									<section class="col col-8">
+										4米
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										车厢高：
+									</label>
+									<section class="col col-8">
+										4米
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										百公里参考油耗：
+									</label>
+									<section class="col col-8">
+										33L
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										每日行驶里程：
+									</label>
+									<section class="col col-8">
+										300km
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										每日行驶时间：
+									</label>
+									<section class="col col-8">
+										10小时
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										司机：
+									</label>
+									<section class="col col-8">
+										张三，李四
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										手机号：
+									</label>
+									<section class="col col-8">
+										13800001234，13800001236
+									</section>
+							</div>
+						</div>
+						<header>档案资料</header>
+						<div class="padding-top-10 clearfix">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">购买日期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">购买价值：
+									</label>
+									<section class="col col-8">
+										800,000 元
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">车架号：
+									</label>
+									<section class="col col-8">
+										LEFYECG2X9HN10448
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+								
+									<label class="col col-4 text-align-right txt-color-blueDark">发动机号：
+									</label>
+									<section class="col col-8">
+										93018631
+									</section>
+								
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">标准使用年限：
+									</label>
+									<section class="col col-8">
+										8 年
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">行驶证有效期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										营运证有效期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										营运证二保有效期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										交强险有效期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										商业险有效期：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">
+										车厢高：
+									</label>
+									<section class="col col-8">
+										2014-02-14
+									</section>
+							</div>
+						</div>
+						<header>附加信息</header>
+						<div class="padding-top-10 clearfix">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">车辆尾板：
+									</label>
+									<section class="col col-8">
+										有
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">尾板厂家：
+									</label>
+									<section class="col col-8">
+										日野
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">尾板品牌：
+									</label>
+									<section class="col col-8">
+										广州本田
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">尾板价值：
+									</label>
+									<section class="col col-8">
+										50,000 元
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+									<label class="col col-4 text-align-right txt-color-blueDark">尾板使用年限：
+									</label>
+									<section class="col col-8">
+										20年
+									</section>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+								<label class="col col-4 text-align-right txt-color-blueDark">GPS设备号：
+								</label>
+								<section class="col col-8">
+									31010012
+								</section>
+							</div>
+						</div>
+						<!-- end widget content -->
+					</div>
+					</div>
+				<!-- end widget div -->
+				</div>
+			</div>
+			<!-- end widget -->
+
+
+		</article>
+		<!-- WIDGET END -->
+
+	</div>
+
+	<!-- end row -->
+
+	<!-- end row -->
+
+</section>

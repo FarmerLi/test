@@ -1,0 +1,18 @@
+{
+	"page":"page20130818-060424-331",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-060424-331_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"答案1：",
+			"titleEnglish":"",
+			"top":"504px",
+			"left":"473px",
+			"width":"443px",
+			"height":"106px",
+			"content":"<p>（1）优先快件或特殊业务快件优先派送，需要放到车厢外层；<br>（2）根据快件的时效进行排序，对时效要求不高的快件放到车厢里层； <br>（3）根据由近而远的地址进行排序，较远地址的快件放到车厢里层；<br>（4）根据快件的大小进行排序，较大快件优先派送，放到车厢外层。</p>"
+		}
+	]
+}

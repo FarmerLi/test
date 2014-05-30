@@ -1,0 +1,366 @@
+<!--
+	The ID "widget-grid" will start to initialize all widgets below 
+	You do not need to use widgets if you dont want to. Simply remove 
+	the <section></section> and you can use wells or panels instead 
+	-->
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+	<!-- row -->
+	<div class="row">
+		
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-0" data-widget-sortable="false" data-widget-custombutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+				<!-- widget options:
+					usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+					
+					data-widget-colorbutton="false"	
+					data-widget-editbutton="false"
+					data-widget-togglebutton="false"
+					data-widget-deletebutton="false"
+					data-widget-fullscreenbutton="false"
+					data-widget-custombutton="false"
+					data-widget-collapsed="true" 
+					data-widget-sortable="false"
+					
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-gear"></i> </span>
+					<h2>宅配通配置</h2>				
+					
+				</header>
+
+				<!-- widget div-->
+				<div>
+					
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+						<!-- Normally there would be an input text box here to change widget title. 
+							Use this area only if plan to let users change widget title --> 
+					</div>
+					<!-- end widget edit box -->
+					
+					<!-- widget content -->
+					<div class="widget-body">
+						<!-- this is what the user will see -->
+						<form action="" class="">
+							<fieldset>
+								<div class="row">
+									<article class="col-sm-12">
+										<div class="collapse navbar-collapse navbar-inverse">
+											<ul class="nav navbar-nav">
+														<li>
+															<a href="javascript:void(0);">基础配置</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">接货业务配置</a>
+														</li>
+														<li class="active">
+															<a href="javascript:void(0);">送货业务配置</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">干线业务配置</a>
+														</li>
+													</ul>								
+										</div>					
+									</article>
+								</div>
+							</fieldset>
+							<fieldset class="padding-top-10"></fieldset>
+							<fieldset>
+								<div class="row">
+									<div class="col-xs-12 col-md-3" id="warningList">
+										<ol class="dd-list">
+													<li><div name="wks" class="dd-handle no-margin"><i class="fa fa-fw fa-ellipsis-vertical"></i>未开始</div>
+														<span class="onoffswitch"><input checked="checked" type="checkbox" id="myonoffswitch1" class="onoffswitch-checkbox" name="onoffswitch1">
+															<label for="myonoffswitch1" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li><div name="pljsbj"class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>提货中</div>
+														<span class="onoffswitch"><input checked="checked" type="checkbox" id="myonoffswitch2" class="onoffswitch-checkbox" name="onoffswitch2">
+															<label for="myonoffswitch2" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li><div name="dsbj" class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>到达提货点</div>
+														<span class="onoffswitch"><input type="checkbox" id="myonoffswitch3" class="onoffswitch-checkbox" name="onoffswitch3">
+															<label for="myonoffswitch3" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li><div name="dssx"class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>送货中</div>
+														<span class="onoffswitch"><input type="checkbox" id="myonoffswitch4" class="onoffswitch-checkbox" name="onoffswitch4">
+															<label for="myonoffswitch4" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li>
+														<div class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>到达送货点</div>
+														<span class="onoffswitch"><input type="checkbox" id="myonoffswitch5" class="onoffswitch-checkbox" name="onoffswitch5">
+															<label for="myonoffswitch5" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li><div class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>改签</div>
+														<span class="onoffswitch"><input type="checkbox" id="myonoffswitch6" class="onoffswitch-checkbox" name="onoffswitch6">
+															<label for="myonoffswitch6" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+													<li><div class="dd-handle"><i class="fa fa-fw fa-ellipsis-vertical"></i>改期/取消</div>
+														<span class="onoffswitch"><input type="checkbox" id="myonoffswitch7" class="onoffswitch-checkbox" name="onoffswitch6">
+															<label for="myonoffswitch7" class="onoffswitch-label"> 
+															<div data-swchoff-text="禁用" data-swchon-text="启用" class="onoffswitch-inner"></div> 
+															<div class="onoffswitch-switch"></div> </label> 
+														</span>
+													</li>
+												</ol>
+									</div>	
+									<div class="col-xs-12 col-md-9">
+										<div class="row show_tab" id="wks">
+											<div class="col-xs-12">
+												<div class="well">
+													<h3 class="" style="margin-top:0px;">未开始</h3>
+													<table class="table">
+														<tr>
+															<td>
+																<button type="submit" class="btn btn-default">增加节点</button>
+																<button type="submit" class="btn btn-danger">删除节点</button>
+															</td>
+															<td style="vertical-align:middle;text-align:right">
+																状态名称：
+															</td>
+															<td width="150px">
+																<input type="text" placeholder="" class="form-control" value="未开始">
+															</td>
+														</tr>
+													</table>
+													<div class="row">
+														<div class="col-xs-12 col-md-6" style="text-align:center">
+															<img src="img/phone_setting.jpg" alt="" />
+															<button type="submit" class="btn btn-default">刷新预览</button>	
+														</div>
+														<div class="col-xs-12 col-md-6">
+															<div class="">
+																<button type="submit" class="btn btn-default" id="show_all">显示全部</button>
+															</div>	<br />														
+															<div id="listtab" class="" style="overflow-y: scroll; height:380px;border:1px solid #ccc">
+																<table id="table-1" class="table-bordered table">
+																<thead>
+																	<tr>
+																		<th width="80px">是否显示</th>
+																		<th>显示字段</th>	
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr id="s-1">
+																		<td>
+																			<input type="checkbox" name="" />
+																		</td>
+																		<td>任务号</td>																	
+																	</tr>
+																	<tr id="s-2">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>运单号</td>																	
+																	</tr>
+																	<tr id="s-3">
+																		<td><input type="checkbox" name="" checked="checked" /></td>
+																		<td>发件人</td>																	
+																	</tr>
+																	<tr id="s-4">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>发件人手机</td>																	
+																	</tr>
+																	<tr id="s-5">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>发件人地址</td>																	
+																	</tr>																	
+																	<tr id="s-6">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>送货人</td>																	
+																	</tr>																	
+																	<tr id="s-7">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>送货人地址</td>		
+																	<tr id="s-8">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>送货人电话</td>																	
+																	</tr>																	
+																	<tr id="s-9">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>代收货款金额</td>																	
+																	</tr>																	
+																	<tr id="s-10">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>货物总重量</td>																	
+																	</tr>																	
+																	<tr id="s-11">
+																		<td><input type="checkbox" name="" /></td>
+																		<td>货物总体积</td>																	
+																	</tr>																	
+																																																
+																</tbody>	
+															</table>
+															</div>													
+															<div class="col-xs-12 padding-top-10 text-align-center">
+																<div class="col-xs-6">
+																	<input type="checkbox" name="" id="" checked="checked"/>
+																	<button type="submit" class="btn btn-default" id="">拒绝</button>
+																</div>
+																<div class="col-xs-6">
+																	<input type="checkbox" name="" id="" checked="checked"/>	
+																	<button type="submit" class="btn btn-default" id="">确认</button>											
+																</div>
+															</div>
+														</div>
+														
+													</div>	
+
+												</div>
+												<div class="well no-border text-align-right">
+													<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>保存修改</button>												
+													<button type="submit" class="btn btn-default"><i class="fa fa-save"></i>还原默认值</button>												
+												</div>
+											</div>
+										</div>
+										<div class="show_tab">sdf</div>
+										<div class="show_tab">222</div>
+										<div class="show_tab" id="nochecked">
+												<span class="txt-color-red"><i class="fa fa fa-gear fa-lg fa-fw"></i>该状态未启用，请先启用</span>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<!-- end widget content -->
+					
+				</div>
+				<!-- end widget div -->
+				
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+		
+	</div>
+
+	<!-- end row -->
+
+	<!-- row -->
+
+	<div class="row">
+		<!-- a blank row to get started -->
+			
+	</div>
+
+	<!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+	
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 * 
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 * 
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 * 
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 * 
+	 * // activate inline charts
+	 * runAllCharts();
+	 * 
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 * 
+	 * //setup nav height (dynamic)
+	 * nav_page_height();
+	 * 
+	 * // run form elements
+	 * runAllForms();
+	 * 
+	 ********************************
+	 * 
+	 * pageSetUp() is needed whenever you load a page. 
+	 * It initializes and checks for all basic elements of the page 
+	 * and makes rendering easier.
+	 * 
+	 */	
+	 
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 */
+
+	$(".onoffswitch-checkbox").click(function(){
+		if($(this).attr("checked")=="checked"){
+			$(this).removeAttr("checked");
+			}							
+		else{
+			$(this).attr("checked","checked");
+			}
+		});
+	function show_table(){
+			$(".dd-list li").css("position","relative"); 
+			$(".onoffswitch").css({
+				"position":"absolute",
+				"top":"8px",
+				"right":"5px",				
+				}); 			
+			$(".show_tab").fadeOut("fast");	
+			$(".dd-handle").click(function(){
+				var bname;
+				bname = $(this).attr("name");
+				$(".fa-check-square").attr("class","fa fa-fw fa-ellipsis-vertical");
+				$(".show_tab").fadeOut("fast");
+				if ($(this).siblings("span").children("input").attr("checked") == "checked") {
+					$("#"+bname).fadeIn("fast");
+					$(this).children("i").attr("class","fa fa-fw fa-check-square");
+				}
+				else{
+					$("#nochecked").fadeIn("fast");
+				}
+				console.log($(this).siblings("span").children("input").attr("checked"));
+				});
+		};
+		
+	show_table();	
+	loadScript("js/plugin/tablednd/jquery.tablednd.min.js", runtablednd);
+
+	function runtablednd() {
+		$("#table-1").tableDnD({
+			onDragClass: "danger",
+			 onDrop: function(table, row) {
+				console.log($('#table-1').tableDnDSerialize());
+				}
+			});
+		}
+	$("#show_all").click(function(){
+		$("#listtab").removeAttr("style"),
+		$(this).hide();
+		})
+</script>

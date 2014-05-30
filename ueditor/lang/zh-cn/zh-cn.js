@@ -534,5 +534,10 @@ UE.I18N['zh-cn'] = {
         'netError':"网络连接错误，请重试！",
         'copySuccess':"图片地址已经复制！",
         'flashI18n':{} //留空默认中文
+    },
+    'coustom_resource' : {
+        'static' : {
+            
+        }
     }
 };

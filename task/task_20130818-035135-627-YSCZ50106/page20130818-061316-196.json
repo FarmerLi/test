@@ -1,0 +1,18 @@
+{
+	"page":"page20130818-061316-196",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-061316-196_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"问题2：",
+			"titleEnglish":"",
+			"top":"34px",
+			"left":"9px",
+			"width":"451px",
+			"height":"105px",
+			"content":"<p>某一天，你接到取派员的电话告知你今天将会有一个包裹送达。期间，突然有件急事需要外出处理导致你忽略了即将送货上门的快递。那么，取派员在到达与你约定的派件地址时，将出现快件无法派送的情况。那么你知道当取派员遇到快件无法派送的情况时，他应该采取什么措施吗？</p>"
+		}
+	]
+}

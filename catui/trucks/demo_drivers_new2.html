@@ -1,0 +1,304 @@
+<div class="row">
+	<div class="col col-sm-6 col-xs-12">
+		<a href="#ajax/demo_drivers.html" class="btn btn-default"> &lt; 返回</a>
+	</div>
+	<div class="col col-sm-6 col-xs-12">
+		<a href="#" class="btn btn-default pull-right"><i class="fa fa-shopping-cart"></i> 编辑页面布局</a>
+	</div>
+</div>
+<div class="row"><br /></div>
+<div class="well">
+	<form action="" class="" novalidate="novalidate" id="info-form">
+		<fieldset>
+			<legend>基本信息</legend>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>司机姓名</label>
+				<input type="text" name="drivername" placeholder="" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label class="txt-color-red">所属机构</label>
+				<select name="org" class="form-control">
+					<option value="0" selected="" disabled="">请选择</option>
+					<option value="1">北京</option>
+					<option value="2">上海</option>
+					<option value="3">广州</option>
+					<option value="4">香港</option>
+					<option value="5">台湾</option>
+				</select> 
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label class="txt-color-red">手机号</label>
+				<input type="text" name="mobile_no" placeholder=""  data-mask="99999999999" id="mobile_no"  class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>身份证号</label>
+				<input type="text" name="sfz" placeholder="" data-mask="9999-9999-9999-9999-99" id="sfz" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>工号</label>
+				<input type="text" name="company_id" placeholder="" id="company_id" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>年龄</label>
+				<input type="text" name="age" placeholder="年龄" data-mask="99" id="age" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>入职日期</label>
+				<input name="in_date" type="text" id="ruzhidate" value="2014-02-01" maxlength="10" class="form-control">
+						<script type="text/javascript">
+							$(document).ready(function() {
+							  $('#ruzhidate').daterangepicker({ 
+									singleDatePicker: true, //必须要有默input 认value
+									//timePicker: true,		//是否启用时间选择
+									timePickerIncrement:10,	//分钟选择的间隔
+									format: 'YYYY-MM-DD',	//返回值的格式
+									//timePicker12Hour: false,	//采用24小时计时制
+									showDropdowns: true,		//是否显示年、月下拉框
+									});
+						   });
+						</script>
+					
+				
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>学历</label>
+				<select name="edu" id="edu" class="form-control">
+					<option value="0">小学</option>
+					<option value="1">初中</option>
+					<option value="2">高中</option>
+					<option value="3">本科</option>
+					<option value="4">硕士</option>
+				</select> 
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>户口所在地</label>
+				<input name="Census" type="text" id="Census" placeholder="" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>籍贯</label>
+				<input type="text" name="card" placeholder="" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>当前居住地</label>
+				<input type="text" name="add" placeholder="" id="add" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>家庭联系电话</label>
+				<input type="text" name="tel" placeholder="" data-mask="9999-9999-9999-9999" id="tel" class="form-control">
+			</div>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>员工状态</label>
+				<select name="state" id="state" class="form-control">
+					<option value="0">在职</option>
+					<option value="1">离职</option>
+					<option value="2">试用</option>
+				</select> 
+			</div>
+			
+		</fieldset>
+
+		
+		<fieldset>
+			<legend>档案信息</legend>
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>驾驶证号</label>
+				<input type="text" name="" placeholder="" data-mask="9999-9999-9999-9999" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>发证机关</label>
+				<input type="text" name="card" placeholder="" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>驾驶证档案号</label>
+				<input type="text" name="" placeholder=""  class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>驾驶证有效期</label>
+				<div class="row">
+					<div class="col-xs-8">
+						<input type="text" maxlength="10" id="jshdate" value="2014-02-01" class="form-control">
+						<script type="text/javascript">	
+							$(document).ready(function() {
+							  $('#jshdate').daterangepicker({ 
+									singleDatePicker: true, //必须要有默input 认value
+									//timePicker: true,		//是否启用时间选择
+									timePickerIncrement:10,	//分钟选择的间隔
+									format: 'YYYY-MM-DD',	//返回值的格式
+									//timePicker12Hour: false,	//采用24小时计时制
+									showDropdowns: true,		//是否显示年、月下拉框
+									});
+						   });
+						</script>
+					</div>
+					<div class="col-xs-4">
+						<select class="form-control">
+							<option value="0">周期</option>
+							<option value="1">1年</option>
+							<option value="2">2年</option>
+						</select> 
+					</div> 
+				</div>
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>驾龄</label>
+				<input type="text" name="" placeholder="" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>准驾车型</label>
+				<select class="form-control">
+					<option value="0">A本</option>
+					<option value="1">B本</option>
+					<option value="2">C本</option>
+				</select> 
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>体检日期</label>
+				<div class="row">
+					<div class="col-xs-8">
+						<input type="text" maxlength="10" id="tjdate" value="2014-02-01" class="form-control">
+						<script type="text/javascript">	
+							$(document).ready(function() {
+							  $('#tjdate').daterangepicker({ 
+									singleDatePicker: true, //必须要有默input 认value
+									//timePicker: true,		//是否启用时间选择
+									timePickerIncrement:10,	//分钟选择的间隔
+									format: 'YYYY-MM-DD',	//返回值的格式
+									//timePicker12Hour: false,	//采用24小时计时制
+									showDropdowns: true,		//是否显示年、月下拉框
+									});
+						   });
+						</script>
+					</div>
+					<div class="col-xs-4">
+						<select class="form-control">
+							<option value="0">周期</option>
+							<option value="1">1年</option>
+							<option value="2">2年</option>
+						</select> 
+					</div> 
+				</div>
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>从业资格证号</label>
+				<input type="text" name="" placeholder="" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<label>从业类型</label>
+					<select class="form-control">
+						<option value="0">普通货物运输</option>
+						<option value="1">危险化学品运输</option>
+					</select>
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<label>从业发证机关</label>
+					<input type="text" name="" placeholder="" class="form-control">
+			</div>
+
+			<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<label>从业资格证有效期</label>
+				<div class="row">
+					<div class="col-xs-8">
+						<input type="text" maxlength="10" id="zige_date" value="2014-02-01" class="form-control">
+						<script type="text/javascript">
+							$(document).ready(function() {
+							  $('#zige_date').daterangepicker({ 
+									singleDatePicker: true, //必须要有默input 认value
+									//timePicker: true,		//是否启用时间选择
+									timePickerIncrement:10,	//分钟选择的间隔
+									format: 'YYYY-MM-DD',	//返回值的格式
+									//timePicker12Hour: false,	//采用24小时计时制
+									showDropdowns: true,		//是否显示年、月下拉框
+									});
+						   });
+						</script>
+					</div>
+					<div class="col-xs-4">
+						<select class="form-control">
+							<option value="0">周期</option>
+							<option value="1">1年</option>
+							<option value="2">2年</option>
+						</select> 
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-save"></i>
+						保存
+					</button>
+					<button type="submit" class="btn btn-default">保存并新建</button>
+					<button type="submit" class="btn btn-default">取消</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</form>
+</div>
+<!-- daterangepicker JS -->
+<script src="js/plugin/date/moment.js"></script>
+<script src="js/plugin/date/daterangepicker.js"></script>
+<script type="text/javascript">
+
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+	
+	// Load form valisation dependency 
+	loadScript("js/plugin/jquery-form/jquery-form.min.js", runFormValidation);
+	
+	
+	// Registration validation script
+	function runFormValidation() {
+		var $checkoutForm = $('#info-form').validate({
+		// Rules for form validation
+			rules : {
+				drivername : {
+					required : true,
+					maxlength : 12
+				},
+				org : {
+					required : true,
+				},
+				mobile_no : {
+					required : true,
+					number : true,
+				},
+			},
+			// Messages for form validation
+			messages : {
+				drivername : {
+					required : '必填项',
+					maxlength : '最长12个字'
+				},
+				mobile_no : {
+					required : '必填项',
+					number : '11位数字'
+				},
+				org : {
+					required : '必填项',
+				},
+			},
+			// Do not change code below
+			errorPlacement : function(error, element) {
+				error.insertAfter(element.parent());
+			}
+		});
+	}
+</script>
+
+

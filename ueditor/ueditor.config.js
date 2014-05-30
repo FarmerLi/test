@@ -180,11 +180,11 @@
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
         
-        , toolbars: [["fullscreen","undo","redo","insertunorderedlist","insertorderedlist","unlink","link","preview","help","pagebreak","insertimage","emotion","insertvideo","attachment","horizontal","anchor","spechars","blockquote","background","bold","italic","underline","strikethrough","forecolor","backcolor","justifyleft","justifycenter","justifyright","justifyjustify","indent","removeformat","formatmatch","lineheight","fontsize","inserttable","deletetable","mergecells","splittocells","insertcol","insertrow","deletecol","deleterow"]]
+        , toolbars: [["fullscreen","undo","redo","insertunorderedlist","insertorderedlist","unlink","link","preview","help","pagebreak","insertimage","emotion","insertvideo","attachment","horizontal","anchor","spechars","blockquote","background","bold","italic","underline","strikethrough","forecolor","backcolor","justifyleft","justifycenter","justifyright","justifyjustify","indent","removeformat","formatmatch","lineheight","fontsize","inserttable","deletetable","mergecells","splittocells","insertcol","insertrow","deletecol","deleterow", 'coustom_resource']]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
-//        ,labelMap:{
-//            'anchor':'', 'undo':''
-//        }
+       ,labelMap:{
+           'coustom_resource' : '资源引入'
+       }
         //webAppKey
         //百度应用的APIkey，每个站长必须首先去百度官网注册一个key后方能正常使用app功能
         //,webAppKey:""

@@ -1,0 +1,28 @@
+{
+	"page":"page20130818-065920-836",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-065920-836_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"问题4：",
+			"titleEnglish":"",
+			"top":"38px",
+			"left":"9px",
+			"width":"450px",
+			"height":"107px",
+			"content":"<p>当你在淘宝网上订购的商品送到你手中时，你突然发现商品与想象中相差的很远，于是你决定拒收此快件。那么你知道对于这种没有签收的快件，也即无法派送的快件，取派员与快递公司的移交程序是怎么样的？</p>"
+		},
+		{
+			"renderFunction":"renderBlock",
+			"block":[
+				{
+					"folder":"learn_20130906-062553-697-YSCZ40106",
+					"name":"YSCZ40106 无法派送的快件-14",
+					"img_url":"images/cc1000.jpg"
+				}
+			]
+		}
+	]
+}

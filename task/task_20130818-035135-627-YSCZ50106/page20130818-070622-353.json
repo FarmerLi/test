@@ -1,0 +1,18 @@
+{
+	"page":"page20130818-070622-353",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-070622-353_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"答案4：",
+			"titleEnglish":"",
+			"top":"57px",
+			"left":"15px",
+			"width":"327px",
+			"height":"119px",
+			"content":"<p>（1）取派员整理、复核无法派送的快件；<br>（2）快件处理人员进行快件清点和外包装检查；<br>（3）取派员登记无法派送的快件信息；<br>（4）快件处理人员将快件进行扫描；<br>（5）取派员和快件处理人员进行签字交接。</p>"
+		}
+	]
+}

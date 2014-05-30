@@ -14,14 +14,10 @@
 	?>
 	<form action="#" method="POST">
 		<textarea name="name" id="name" style="height: 200px; width: 700px"></textarea>
-		<textarea name="name2" id="name2" style="height: 200px; width: 700px"></textarea>
-		<textarea name="name3" id="name3" style="height: 200px; width: 700px"></textarea>
 		<input type="submit" value="submit" />
 	</form>
 	<script type="text/javascript">
 			UE.getEditor('name');
-			UE.getEditor('name2');
-			UE.getEditor('name3');
 	</script>
 </body>
 </html>

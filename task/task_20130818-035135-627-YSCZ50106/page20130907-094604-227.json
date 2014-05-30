@@ -1,0 +1,31 @@
+{
+	"page":"page20130907-094604-227",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"",
+	"data":[
+		{
+			"renderFunction":"renderImage",
+			"top":"41px",
+			"left":"8px",
+			"width":"431px",
+			"height":"594px",
+			"imageName":"data/task_20130818-035135-627-YSCZ50106/page20130907-094643-291.jpg",
+			"imageTitle":"",
+			"imageSize":{
+				"w":"525px",
+				"h":"751px"
+			}
+		},
+		{
+			"renderFunction":"renderText",
+			"title":"分析评价",
+			"titleEnglish":"",
+			"top":"1px",
+			"left":"1px",
+			"width":"441px",
+			"height":"29px",
+			"content":""
+		}
+	]
+}

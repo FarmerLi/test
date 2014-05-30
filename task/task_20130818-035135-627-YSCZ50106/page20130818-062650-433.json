@@ -1,0 +1,18 @@
+{
+	"page":"page20130818-062650-433",
+	"task":"task_20130818-035135-627-YSCZ50106",
+	"renderFunction":"renderLayout",
+	"background":"task_20130818-035135-627-YSCZ50106/page20130818-062650-433_bg.jpg",
+	"data":[
+		{
+			"renderFunction":"renderText",
+			"title":"问题3：",
+			"titleEnglish":"",
+			"top":"39px",
+			"left":"3px",
+			"width":"434px",
+			"height":"68px",
+			"content":"<p>大家想一想我们签收快递时通常都需要做些什么呢？那么，你知道取派员在把快递交给你的时候，他需要注意些什么呢？</p>"
+		}
+	]
+}

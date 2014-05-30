@@ -1,0 +1,12 @@
+<html>
+<head></head>
+<body>
+<iframe src="http://baidu.com" style="width:1000px;height: 100px;"  id="test" />
+<script type="text/javascript">
+window.onload = (function () {   
+    var iObj = document.getElementById('test').contentWindow;   
+    iObj.document.getElementById('kw1').value = "test";
+}); 
+</script>
+</body>
+</html>
